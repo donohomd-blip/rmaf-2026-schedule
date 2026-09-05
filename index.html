@@ -99,7 +99,9 @@
     display:inline-flex;
     border: 1px solid var(--hairline);
     border-radius: 5px;
-    overflow: hidden;
+    overflow-x: auto;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .segmented button{
@@ -111,6 +113,7 @@
     padding: 0.45rem 0.85rem;
     cursor: pointer;
     border-right: 1px solid var(--hairline);
+    white-space: nowrap;
     transition: background 0.15s ease, color 0.15s ease;
   }
   .segmented button:last-child{ border-right: none; }
@@ -367,9 +370,18 @@
   }
 
   .card .title{
+    flex: 1 1 auto;
+    min-width: 0;
     font-size: 1rem;
     line-height: 1.32;
     margin: 0 0 0.28rem;
+  }
+
+  .row-actions{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
   }
 
   .card .meta{
@@ -399,6 +411,30 @@
   }
   .card.open .chevron{ transform: rotate(180deg); color: var(--accent, var(--cream-faint)); }
   .card.break-card .chevron{ display: none; }
+
+  .star-btn{
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    padding: 0;
+    margin: -0.15rem 0 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--cream-faint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease, transform 0.1s ease;
+  }
+  .star-btn svg{ display: block; }
+  .star-btn:hover{ color: var(--v-lobby); }
+  .star-btn.active{ color: var(--v-lobby); }
+  .star-btn:active{ transform: scale(0.88); }
+
+  .conflict-warn{
+    color: #e2a53a;
+    font-weight: 600;
+  }
 
   .card .details{
     max-height: 0;
@@ -2347,35 +2383,36 @@ const LUTHIERS = [
   {
     "name": "Benedetto Guitars",
     "location": "Savannah, GA",
-    "url": "https://www.benedettoguitars.com/",
+    "url": "https://www.benedettoguitars.com",
     "bio": "Founded in 1968 by luthier Robert Benedetto, celebrating over 50 years of jazz guitar excellence, building some of the world's most collectible archtops.",
-    "instagram": "https://www.instagram.com/benedetto_guitars/"
+    "instagram": "https://www.instagram.com/benedetto_guitars/",
+    "facebook": "https://www.facebook.com/benedettoguitars"
   },
   {
     "name": "Maegen Wells Guitars and Mandolins",
     "location": "Forestville, CA",
-    "url": "http://www.maegenwellsguitars.com/",
+    "url": "https://www.maegenwellsguitars.com",
     "bio": "Handcrafted guitars and mandolins built one at a time on a busy bench full of sawdust, tools, and glue.",
     "instagram": "https://www.instagram.com/maegenwellsguitars/"
   },
   {
     "name": "LHT Guitars",
     "location": "Healdsburg, CA",
-    "url": "https://www.lhtguitars.com/",
+    "url": "https://www.lhtguitars.com",
     "bio": "Each guitar built from start to finish by hand, from a hand-drawn full-scale blueprint through to the final finish.",
     "instagram": "https://www.instagram.com/lhtguitars/"
   },
   {
     "name": "Beauregard Guitars",
     "location": "Montreal, Canada",
-    "url": "http://beauregardguitars.com/",
+    "url": "https://beauregardguitars.com",
     "bio": "Montreal-based lutherie shop building archtop and gypsy-jazz guitars.",
     "instagram": "https://www.instagram.com/beauregardguitars/"
   },
   {
     "name": "Martin Tremblay Luthier",
     "location": "Montreal, Canada",
-    "url": "https://www.tremblayluthier.com/",
+    "url": "https://www.tremblayluthier.com",
     "bio": "Renowned for archtop and gypsy jazz guitars since 2002, with instruments played by Bireli Lagrene and Denis Chang; mentored by Mario Beauregard and Ken Parker.",
     "instagram": "https://www.instagram.com/tremblay_luthier/"
   },
@@ -2396,7 +2433,7 @@ const LUTHIERS = [
   {
     "name": "German Guitars",
     "location": "Broomfield, CO",
-    "url": "http://germanguitars.com/",
+    "url": "https://germanguitars.com",
     "bio": "One-man shop treating each guitar as a living, functional sculpture rather than a factory product."
   },
   {
@@ -2409,49 +2446,51 @@ const LUTHIERS = [
   {
     "name": "Sonntag Guitars",
     "location": "Augsburg, Germany",
-    "url": "https://sonntag-guitars.com/",
+    "url": "https://www.sonntag-guitars.com",
     "bio": "Hand-crafts archtop jazz guitars exclusively, using no prefabricated parts and wood air-dried for at least five years.",
     "instagram": "https://www.instagram.com/sonntaggitarrenbau/"
   },
   {
     "name": "D'Arcy Blake (D'Arcy Guitars)",
     "location": "Brooklyn, NY",
-    "url": "https://www.darcyguitars.com/",
+    "url": "https://www.darcyguitars.com",
     "bio": "Founded in 2020 after a career shift from art history; the flagship Figure Zero was designed with twin brother, jazz guitarist David Blake.",
-    "instagram": "https://www.instagram.com/darcy.guitars/"
+    "instagram": "https://www.instagram.com/darcy.guitars/",
+    "facebook": "https://www.facebook.com/EagleGuitars"
   },
   {
     "name": "Marchione Guitars",
     "location": "Houston, TX",
-    "url": "https://marchione.com/",
+    "url": "https://marchione.com",
     "bio": "Stephen Marchione began building in 1990, trained under John Suhr, and opened his first New York shop in 1993 before returning to his hometown of Houston in 2001.",
     "instagram": "https://www.instagram.com/marchioneguitars/"
   },
   {
     "name": "Manzer Guitars",
     "location": "Toronto, Canada",
-    "url": "https://manzer.com/",
+    "url": "https://manzer.com",
     "bio": "Linda Manzer has been building guitars since 1974.",
-    "instagram": "https://www.instagram.com/manzerguitars/"
+    "instagram": "https://www.instagram.com/manzerguitars/",
+    "facebook": "https://www.facebook.com/lindamanzer"
   },
   {
     "name": "Beno\u00eet Lavoie Luthier",
     "location": "Qu\u00e9bec, Canada",
-    "url": "https://www.benoitlavoie.com/",
+    "url": "https://www.benoitlavoie.com",
     "bio": "Instrument making at the convergence of art and science.",
     "instagram": "https://www.instagram.com/benoitlavoieluthier/"
   },
   {
     "name": "Brad Corney Guitars",
     "location": "Santa Rosa, CA",
-    "url": "https://www.bradcorneyguitars.com/",
+    "url": "https://www.bradcorneyguitars.com",
     "bio": "Acoustic archtops inspired by the 1920s and '30s, built with old-world glues, finishes, and craftsmanship.",
     "instagram": "https://www.instagram.com/bradcorneyguitars/"
   },
   {
     "name": "Mirabella Guitars",
     "location": "Saint James, NY",
-    "url": "https://www.mirabellaguitars.com/",
+    "url": "https://www.mirabellaguitars.com",
     "bio": "Cristian Mirabella, with over 40 years of experience, is a premier archtop builder and top restorer of vintage D'Angelico, D'Aquisto, and golden-era Gibson instruments.",
     "instagram": "https://www.instagram.com/mirabellaguitars/"
   },
@@ -2460,26 +2499,28 @@ const LUTHIERS = [
     "location": "Wellerlooi, Netherlands",
     "url": "https://scharpach.com/",
     "bio": "Theo Scharpach has led innovative archtop design for over 40 years, building for players including Steve Howe, Randy Bachman, and Al Di Meola.",
-    "instagram": "https://www.instagram.com/scharpachmasterguitar/"
+    "instagram": "https://www.instagram.com/theo_scharpach/",
+    "facebook": "https://www.facebook.com/scharpachmasterguitars",
+    "youtube": "https://www.youtube.com/@ScharpachMasterGuitars"
   },
   {
     "name": "Bayard Guitars",
     "location": "",
-    "url": "https://www.bayardguitars.com/",
+    "url": "https://www.bayardguitars.com",
     "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
     "instagram": "https://www.instagram.com/bayard_guitars/"
   },
   {
     "name": "Combs Instruments",
     "location": "",
-    "url": "http://www.combsinstruments.com/",
+    "url": "https://combsinstruments.com",
     "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
     "instagram": "https://www.instagram.com/combsinstruments/"
   },
   {
     "name": "Comins Guitars",
     "location": "",
-    "url": "https://www.cominsguitars.com/",
+    "url": "https://www.cominsguitars.com",
     "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
     "instagram": "https://www.instagram.com/cominsguitars/"
   },
@@ -2514,12 +2555,13 @@ const LUTHIERS = [
     "name": "Ribbecke Guitars",
     "location": "",
     "url": "http://www.rgcguitars.com/",
-    "bio": "Tom Ribbecke's archtop and Halfling-design guitars, handbuilt in Northern California since the early 1970s; Ribbecke Guitar Corporation (RGC) produces a more affordable production line under his supervision."
+    "bio": "Tom Ribbecke's archtop and Halfling-design guitars, handbuilt in Northern California since the early 1970s; Ribbecke Guitar Corporation (RGC) produces a more affordable production line under his supervision.",
+    "facebook": "https://www.facebook.com/tom.ribbecke"
   },
   {
     "name": "Rob Goldberg Handmade Guitars",
     "location": "",
-    "url": "https://www.robgoldberghandmadeguitars.com/",
+    "url": "https://www.robgoldberghandmadeguitars.com",
     "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/."
   },
   {
@@ -2539,16 +2581,17 @@ const LUTHIERS = [
   {
     "name": "Tim Bram Guitars",
     "location": "",
-    "url": "https://www.timbramguitars.com/",
+    "url": "https://www.timbramguitars.com",
     "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
     "instagram": "https://www.instagram.com/timbramguitars/"
   },
   {
     "name": "Wald Guitars",
     "location": "",
-    "url": "https://waldguitars.com/",
+    "url": "https://waldguitars.com",
     "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
-    "instagram": "https://www.instagram.com/waldguitars/"
+    "instagram": "https://www.instagram.com/waldguitars/",
+    "facebook": "https://www.facebook.com/waldguitars/"
   },
   {
     "name": "The Blue Guitars",
@@ -2560,7 +2603,7 @@ const LUTHIERS = [
   {
     "name": "Wilkie Stringed Instruments",
     "location": "Comox Valley, Vancouver Island, BC, Canada",
-    "url": "https://wilkiestringedinstruments.com/",
+    "url": "https://www.wilkiestringedinstruments.com",
     "bio": "Wyatt Wilkie hand-carves archtop guitars and mandolins, including the flagship Northern Flyer mandolin; self-taught, he later apprenticed with archtop icon Bob Benedetto.",
     "instagram": "https://www.instagram.com/wyatt_wilkie/"
   },
@@ -2569,7 +2612,8 @@ const LUTHIERS = [
     "location": "Allen Park, MI",
     "url": "https://zimnicki.com/",
     "bio": "Gary Zimnicki has hand-built custom guitars and mandolins since 1980, working flexibly with each customer to design instruments matched to their needs and tastes.",
-    "youtube": "https://www.youtube.com/channel/UCcmZZbmKxnRn5bKRoN3gNyw"
+    "youtube": "https://www.youtube.com/channel/UCcmZZbmKxnRn5bKRoN3gNyw",
+    "facebook": "https://www.facebook.com/pages/Zimnicki-Guitars/118785944824201"
   }
 ];
 const PERFORMER_LINKS = {
@@ -2581,7 +2625,7 @@ const PERFORMER_LINKS = {
   "Barry Greene": {
     "instagram": "https://www.instagram.com/barrygreenevideolessons/",
     "spotify": "https://open.spotify.com/artist/53XUhgFyb3LmUooPa57ypy",
-    "website": "https://www.barrygreene.com/",
+    "website": "https://www.barrygreene.com",
     "youtube": "http://www.youtube.com/channel/UCfVg7rHUKC7xq36RF0Btjfw"
   },
   "Ben Kahler": {
@@ -2590,24 +2634,25 @@ const PERFORMER_LINKS = {
   },
   "Beth Marlis": {
     "instagram": "https://www.instagram.com/bethmarlis/",
-    "website": "https://www.bethmarlis.com/",
+    "website": "https://www.bethmarlis.com",
     "youtube": "https://www.youtube.com/@bethmarlis"
   },
   "Brad Rabuchin": {
     "instagram": "https://www.instagram.com/rabuchinbrad/",
-    "website": "https://bradrabuchin.net/",
+    "website": "https://www.bradrabuchin.net",
     "youtube": "https://www.youtube.com/c/BradRabuchin"
   },
   "Bruce Forman": {
     "instagram": "https://www.instagram.com/formanism/",
-    "spotify": "https://open.spotify.com/artist/63mL01Tg35HOMl19uzA7kL",
-    "website": "https://www.bruceforman.com/",
+    "spotify": "https://open.spotify.com/artist/1bnizoGwMKVeSsLBtvfC2K",
+    "website": "https://www.bruceforman.com",
     "youtube": "https://www.youtube.com/c/BruceFormanGrumps"
   },
   "David Becker": {
+    "facebook": "https://www.facebook.com/groups/1394235293934024/",
     "instagram": "https://www.instagram.com/dabetrib/",
     "spotify": "https://open.spotify.com/artist/0AkOcG92q7RjZgQuXX8pKe",
-    "website": "https://davidbeckertribune.com/",
+    "website": "https://davidbeckertribune.com",
     "youtube": "https://www.youtube.com/channel/UCQCR0JSL_wT_a8BdmP6zfUQ"
   },
   "David Blake": {
@@ -2635,46 +2680,48 @@ const PERFORMER_LINKS = {
   "Fareed Haque": {
     "instagram": "https://www.instagram.com/fareedhaque/",
     "spotify": "https://open.spotify.com/artist/71hW2OzJ7qdRzysgKktqyN",
-    "website": "https://fareed.com/",
+    "website": "https://www.fareed.com",
     "youtube": "https://www.youtube.com/user/fareedhaque"
   },
   "Frank Vignola": {
     "instagram": "https://www.instagram.com/frankvignolaguitar/",
     "spotify": "https://open.spotify.com/artist/0AJD75yBfnawqdsZ9lvIxw",
-    "website": "https://www.frankvignola.com/",
+    "website": "https://www.frankvignola.com",
     "youtube": "https://www.youtube.com/@FrankVignolaGuitar"
   },
   "Grant Gordy": {
     "instagram": "https://www.instagram.com/grantgordy/",
     "spotify": "https://open.spotify.com/artist/4PEBfkLb0yruw3ki661c9q",
-    "website": "https://www.grantgordy.com/"
+    "website": "https://www.grantgordy.com"
   },
   "Greg Ruby": {
     "instagram": "https://www.instagram.com/gregrubymusic/",
-    "website": "https://gregrubymusic.com/",
+    "website": "https://gregrubymusic.com",
     "youtube": "https://www.youtube.com/@GregRubyMusic"
   },
   "Howard Alden": {
     "instagram": "https://www.instagram.com/howard.v.alden/",
     "spotify": "https://open.spotify.com/artist/7sgBK9xjqtnAFTfm2SvWMR",
-    "website": "https://howardalden.com/",
-    "youtube": "https://www.youtube.com/user/halden7"
+    "website": "https://howardalden.com",
+    "youtube": "https://www.youtube.com/channel/UClqzjl1KDgae0h6JUsuzfDA"
   },
   "Jocelyn Gould": {
+    "facebook": "https://www.facebook.com/jocelyngouldmusic",
     "instagram": "https://www.instagram.com/jocelyngouldmusic/",
     "spotify": "https://open.spotify.com/artist/0KOhfBkfEdH7cdjIgfQULJ",
-    "website": "https://www.jocelyngould.com/",
-    "youtube": "https://youtube.com/@jocelyngouldmusic"
+    "website": "https://jocelyngould.com/",
+    "youtube": "https://www.youtube.com/@jocelyngouldmusic"
   },
   "John McVey": {
     "website": "https://www.johnmcvey.com/"
   },
   "John Storie": {
     "instagram": "https://www.instagram.com/jazzstorie/",
-    "website": "http://www.johnstorie.com/",
+    "website": "https://www.johnstorie.com",
     "youtube": "https://www.youtube.com/user/jazzstorie"
   },
   "Jonathan Stout": {
+    "facebook": "https://www.facebook.com/jonathanstout",
     "instagram": "https://www.instagram.com/campusfive/",
     "spotify": "https://open.spotify.com/artist/63DfvceFDGep3KG2WqWN74",
     "website": "https://www.campusfive.com/"
@@ -2686,8 +2733,10 @@ const PERFORMER_LINKS = {
     "youtube": "https://www.youtube.com/@JoschoStephan"
   },
   "Lisa Liu": {
-    "instagram": "https://www.instagram.com/lisaliuguitar/",
-    "website": "https://lisaliuguitar.com/"
+    "facebook": "https://www.facebook.com/lisaliuguitar",
+    "instagram": "https://www.instagram.com/lisaliuguitar",
+    "website": "https://lisaliuguitar.com",
+    "youtube": "https://www.youtube.com/@LisaLiuguitar"
   },
   "Mark Kleinhaut": {
     "website": "https://markkleinhaut.com/",
@@ -2699,7 +2748,7 @@ const PERFORMER_LINKS = {
   "Mason Razavi": {
     "instagram": "https://www.instagram.com/masonrazavi/",
     "spotify": "https://open.spotify.com/artist/5vMll89aIUku9x7qYZJHhF",
-    "website": "http://www.masonrazavi.com/",
+    "website": "https://www.masonrazavi.com",
     "youtube": "https://www.youtube.com/user/masonrazavi"
   },
   "Michael Isabel": {
@@ -2716,10 +2765,11 @@ const PERFORMER_LINKS = {
   "Pasquale Grasso": {
     "instagram": "https://www.instagram.com/pasqualegrassomusic/",
     "spotify": "https://open.spotify.com/artist/7M6Meoc3uCzIyRP7V8HQQY",
-    "website": "https://www.pasqualegrasso.com/",
+    "website": "https://www.pasqualegrasso.com",
     "youtube": "https://www.youtube.com/channel/UCSRa8zcwyNXHT82PUpju0lQ"
   },
   "Pat Kelley": {
+    "spotify": "https://open.spotify.com/artist/5312CcK4Xi8n40gWyWfw8w8",
     "website": "https://patkelley.com"
   },
   "Paul Asbell": {
@@ -2731,13 +2781,13 @@ const PERFORMER_LINKS = {
   "Perry Smith": {
     "instagram": "https://www.instagram.com/perrysmithmusic/",
     "spotify": "https://open.spotify.com/intl-de/artist/4Lf1IYYdNwIehVqkZCqACK",
-    "website": "https://perrysmithmusic.com/",
+    "website": "https://perrysmithmusic.com",
     "youtube": "https://www.youtube.com/channel/UCpVisgvWUuDK2FiJqagQZkw"
   },
   "Ricardo Grilli": {
     "instagram": "https://www.instagram.com/ricardogrilli/",
     "spotify": "https://open.spotify.com/artist/30QYGxMSf3ftpWwdOr8XAb",
-    "website": "http://www.ricardogrilli.com"
+    "website": "https://www.ricardogrilli.com"
   },
   "Rich Severson": {
     "instagram": "https://www.instagram.com/richseversonjazz/",
@@ -2753,9 +2803,10 @@ const PERFORMER_LINKS = {
     "website": "https://www.roryhoffman.com/"
   },
   "Sean McGowan": {
+    "facebook": "https://m.facebook.com/seanmcgowanguitar/",
     "instagram": "https://www.instagram.com/seanmcgowanguitar/",
     "spotify": "https://open.spotify.com/artist/2Msw16MmR5pjJKrE2RlpGz",
-    "website": "https://seanmcgowanguitar.com/",
+    "website": "https://seanmcgowanguitar.com",
     "youtube": "https://www.youtube.com/@seanmcgowanguitar"
   },
   "Shawn Purcell": {
@@ -2776,7 +2827,7 @@ const PERFORMER_LINKS = {
     "instagram": "https://www.instagram.com/tedludwigjazz/",
     "spotify": "https://open.spotify.com/artist/0cyqWumlYCxrN2Olg5Do2D",
     "website": "https://www.tedludwig.com/",
-    "youtube": "https://www.youtube.com/channel/UCHGOWPItlPdlpCWQvHZeQGw"
+    "youtube": "https://www.youtube.com/@tedludwig1451"
   },
   "Tim Farrell": {
     "instagram": "https://www.instagram.com/timfarrellmusic/",
@@ -2784,9 +2835,10 @@ const PERFORMER_LINKS = {
     "website": "https://www.timfarrellmusic.com/"
   },
   "Tim Lerch": {
+    "facebook": "https://www.facebook.com/tim.lerch.9",
     "instagram": "https://www.instagram.com/timlerch.guitarist/",
     "website": "https://www.timlerch.com/",
-    "youtube": "https://www.youtube.com/@TimLerchGuitar"
+    "youtube": "https://www.youtube.com/user/telebasher"
   },
   "Tom Nania": {
     "instagram": "https://www.instagram.com/houseofluthiery/",
@@ -2805,13 +2857,15 @@ const PERFORMER_LINKS = {
     "website": "https://waynegoins.com/"
   },
   "Wayne Wilkinson": {
-    "instagram": "https://www.instagram.com/coguitarist/",
-    "website": "http://waynewilkinson.com/"
+    "facebook": "https://www.facebook.com/WayneWilkinsonJazzGuitarist/",
+    "instagram": "https://www.instagram.com/coguitarist",
+    "website": "https://waynewilkinson.com",
+    "youtube": "https://www.youtube.com/channel/UCeY7lwQxm1xLUGKkvGOp2uA"
   },
   "Wolfgang Muthspiel": {
     "instagram": "https://www.instagram.com/wolfgangmuthspiel/",
     "spotify": "https://open.spotify.com/artist/7a7Vs88vzOcmHh4GOpUEJJ",
-    "website": "http://www.wolfgangmuthspiel.com"
+    "website": "https://www.wolfgangmuthspiel.com"
   }
 };
 
@@ -2883,7 +2937,57 @@ function sortByDayThenTime(items){
   });
 }
 
-let sortMode = 'time';        // 'time' | 'venue' | 'performer' | 'luthiers'
+// ---- "My Schedule" (personal starring) ----------------------------------
+// Starred events are saved to this browser's localStorage only — there's no
+// server, so picks are private and per-device, not shared or synced.
+const STAR_STORAGE_KEY = 'rmaf2026-starred-events';
+
+function loadStarred(){
+  try {
+    const raw = localStorage.getItem(STAR_STORAGE_KEY);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch(e){ return new Set(); }
+}
+let starredIds = loadStarred();
+
+function saveStarred(){
+  try { localStorage.setItem(STAR_STORAGE_KEY, JSON.stringify(Array.from(starredIds))); }
+  catch(e){ /* localStorage unavailable — starring just won't persist */ }
+}
+
+// date+time+title is unique across the schedule, so it doubles as a stable id.
+function eventId(item){ return item.date + '|' + item.time + '|' + item.title; }
+function isStarred(item){ return starredIds.has(eventId(item)); }
+function toggleStar(item){
+  const id = eventId(item);
+  if (starredIds.has(id)) starredIds.delete(id); else starredIds.add(id);
+  saveStarred();
+  render();
+}
+
+// [start, end] in minutes-from-midnight for overlap checks. Only one event in
+// the whole schedule lacks an official end_time; give it a conservative
+// 30-minute assumed length rather than treating it as a zero-length point.
+function eventTimeRange(item){
+  const start = timeToMinutes(item.time);
+  const end = item.end_time ? timeToMinutes(item.end_time) : start + 30;
+  return [start, end];
+}
+
+// Other *starred* events on the same day whose time range overlaps this one.
+function getConflicts(item){
+  if (!isStarred(item)) return [];
+  const [s1, e1] = eventTimeRange(item);
+  return DATA.filter(other => {
+    if (other === item || other.date !== item.date || !isStarred(other)) return false;
+    const [s2, e2] = eventTimeRange(other);
+    return s1 < e2 && s2 < e1;
+  });
+}
+
+const STAR_ICON_PATH = 'M12 2.7l2.9 6.5 6.9.7-5.2 4.8 1.5 6.9L12 18.1l-6.1 3.5 1.5-6.9-5.2-4.8 6.9-.7z';
+
+let sortMode = 'time';        // 'time' | 'venue' | 'performer' | 'luthiers' | 'mine'
 let activeDay = todaysFestivalDay();
 let activeVenues = new Set(); // empty = show all (Time/Venue modes)
 let performerQuery = '';
@@ -2953,7 +3057,23 @@ function buildCard(item, opts){
   title.innerHTML = prefix + escapeHtml(item.title);
   row.appendChild(title);
 
-  if (!isBreak) row.appendChild(chevronSVG());
+  // Star + chevron are grouped together so they sit as one fixed-spacing
+  // unit at the row's right edge, regardless of the title's length.
+  const actions = document.createElement('div');
+  actions.className = 'row-actions';
+
+  const starBtn = document.createElement('button');
+  const starred = isStarred(item);
+  starBtn.className = 'star-btn' + (starred ? ' active' : '');
+  starBtn.setAttribute('aria-label', starred ? 'Remove from my schedule' : 'Add to my schedule');
+  starBtn.title = starBtn.getAttribute('aria-label');
+  starBtn.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18"><path d="' + STAR_ICON_PATH +
+    '" fill="' + (starred ? 'currentColor' : 'none') + '" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  starBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleStar(item); });
+  actions.appendChild(starBtn);
+
+  if (!isBreak) actions.appendChild(chevronSVG());
+  row.appendChild(actions);
 
   const meta = document.createElement('div');
   meta.className = 'meta sans';
@@ -2972,6 +3092,14 @@ function buildCard(item, opts){
     lline.className = 'meta sans';
     lline.innerHTML = '<span class="luthier-tag">Luthier: ' + escapeHtml(item.luthier) + '</span>';
     card.appendChild(lline);
+  }
+
+  const conflicts = getConflicts(item);
+  if (conflicts.length){
+    const warn = document.createElement('div');
+    warn.className = 'meta sans conflict-warn';
+    warn.textContent = '\u26A0 Conflicts with: ' + conflicts.map(c => c.title).join(', ');
+    card.appendChild(warn);
   }
 
   if (!isBreak){
@@ -3023,13 +3151,16 @@ function escapeHtml(s){
 function render(){
   renderSortSeg();
   document.getElementById('dayTabs').style.display = (sortMode === 'performer' || sortMode === 'luthiers') ? 'none' : 'flex';
-  document.getElementById('filterRow').style.display = (sortMode === 'performer' || sortMode === 'luthiers') ? 'none' : 'flex';
+  document.getElementById('filterRow').style.display = (sortMode === 'time' || sortMode === 'venue') ? 'flex' : 'none';
   document.getElementById('performerSearchRow').style.display = sortMode === 'performer' ? 'flex' : 'none';
 
   if (sortMode === 'performer'){
     renderPerformerView();
   } else if (sortMode === 'luthiers'){
     renderLuthierView();
+  } else if (sortMode === 'mine'){
+    renderTabs();
+    renderMyScheduleView();
   } else {
     renderTabs();
     renderFilters();
@@ -3041,9 +3172,16 @@ function render(){
 function renderSortSeg(){
   const el = document.getElementById('sortSeg');
   el.innerHTML = '';
-  [['time','Time'],['venue','Venue'],['performer','Performer'],['luthiers','Luthiers']].forEach(([mode,label]) => {
+  const starIcon = '<svg viewBox="0 0 24 24" width="14" height="14" style="vertical-align:-2px;"><path d="' + STAR_ICON_PATH + '" fill="currentColor"/></svg>';
+  [['time','Time'],['venue','Venue'],['performer','Performer'],['luthiers','Luthiers'],['mine','My Schedule']].forEach(([mode,label]) => {
     const btn = document.createElement('button');
-    btn.textContent = label;
+    if (mode === 'mine'){
+      btn.innerHTML = starIcon + (starredIds.size ? ' ' + starredIds.size : '');
+      btn.setAttribute('aria-label', label + (starredIds.size ? ' (' + starredIds.size + ' starred)' : ''));
+      btn.title = 'My Schedule';
+    } else {
+      btn.textContent = label;
+    }
     btn.className = mode === sortMode ? 'active' : '';
     btn.addEventListener('click', () => { sortMode = mode; render(); });
     el.appendChild(btn);
@@ -3102,7 +3240,7 @@ function buildDayGroups(day){
 // Shared scaffolding for the Time and Venue views: one panel per festival day,
 // each built by `buildSections(day)` (which returns the DOM sections for that
 // day), falling back to an empty-state note when nothing matches the filter.
-function renderDayPanels(buildSections){
+function renderDayPanels(buildSections, emptyText){
   const el = document.getElementById('content');
   el.innerHTML = '';
   DAYS.forEach(day => {
@@ -3115,7 +3253,7 @@ function renderDayPanels(buildSections){
     if (sections.length === 0){
       const note = document.createElement('p');
       note.className = 'empty-note';
-      note.textContent = 'Nothing matches this filter on ' + DAY_LABEL[day].name + '.';
+      note.textContent = emptyText ? emptyText(day) : ('Nothing matches this filter on ' + DAY_LABEL[day].name + '.');
       panel.appendChild(note);
     }
     el.appendChild(panel);
@@ -3175,6 +3313,26 @@ function renderVenuePanels(){
       })
       .filter(Boolean);
   });
+}
+
+// A visitor's own picks, in chronological order per day. Reuses the same
+// day-tab scaffolding as Time/Venue; starring/unstarring anywhere in the app
+// (including here) re-renders and updates this view immediately.
+function renderMyScheduleView(){
+  renderDayPanels(
+    day => {
+      const items = DATA.filter(d => d.date === day && isStarred(d))
+        .slice()
+        .sort((a,b) => timeToMinutes(a.time) - timeToMinutes(b.time));
+      if (items.length === 0) return [];
+
+      const cardsCol = document.createElement('div');
+      cardsCol.className = 'cards-col';
+      items.forEach(item => cardsCol.appendChild(buildCard(item, {showTimeInline:true, showVenueInMeta:true})));
+      return [cardsCol];
+    },
+    day => 'You haven\u2019t starred anything for ' + DAY_LABEL[day].name + ' yet \u2014 tap the star on any event to add it here.'
+  );
 }
 
 function renderPerformerView(){
