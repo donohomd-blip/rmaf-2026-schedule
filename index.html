@@ -6,23 +6,25 @@
 <title>Rocky Mountain Archtop Festival — Schedule</title>
 <style>
   :root{
-    --bg: #17120e;
-    --bg-raised: #1f1913;
-    --bg-card: #251e17;
-    --hairline: #3a2f24;
-    --cream: #ece2cc;
-    --cream-dim: #a89a80;
-    --cream-faint: #6f6350;
+    --bg: #0d1420;
+    --bg-raised: #131c2b;
+    --bg-card: #182333;
+    --hairline: #2a3a4f;
+    --cream: #e7ecf3;
+    --cream-dim: #99a8bd;
+    --cream-faint: #5e7089;
 
     --v-lobby:   #c9a13a;
-    --v-swadley: #3e8c82;
+    --v-swadley: #2fb6ac;
     --v-r119:    #c06c84;
     --v-wads:    #8fa37e;
     --v-social:  #bc5b39;
-    --v-arvada:  #5a72a8;
+    --v-arvada:  #4f95e0;
     --v-silver:  #9a5a9c;
     --v-method:  #d18f3e;
     --v-pickin:  #b13f52;
+
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   }
 
   *{ box-sizing: border-box; }
@@ -39,7 +41,7 @@
     min-height: 100vh;
   }
 
-  .sans{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .sans{ font-family: var(--font-sans); }
 
   header.top{
     padding: 2.4rem 1.5rem 1.2rem;
@@ -49,7 +51,7 @@
   }
 
   .eyebrow{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.72rem;
     letter-spacing: 0.08em;
     color: var(--v-lobby);
@@ -65,7 +67,7 @@
   }
 
   .sub{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     color: var(--cream-dim);
     font-size: 0.92rem;
     margin: 0;
@@ -84,7 +86,7 @@
     align-items:center;
     gap: 0.6rem;
     margin: 1.7rem 0 1.1rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
   }
 
   .sort-label{
@@ -128,7 +130,7 @@
   }
 
   .day-tab{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     background: none;
     border: none;
     color: var(--cream-faint);
@@ -161,7 +163,7 @@
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1.8rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
   }
 
   .filter-label{
@@ -217,29 +219,15 @@
     border-radius: 5px;
     padding: 0.55rem 0.8rem;
     color: var(--cream);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.88rem;
   }
   .performer-search::placeholder{ color: var(--cream-faint); }
   .performer-search:focus{ outline: none; border-color: var(--v-lobby); }
 
-  .performer-select{
-    flex: 1 1 220px;
-    max-width: 280px;
-    background: var(--bg-raised);
-    border: 1px solid var(--hairline);
-    border-radius: 5px;
-    padding: 0.55rem 0.8rem;
-    color: var(--cream);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 0.88rem;
-    cursor: pointer;
-  }
-  .performer-select:focus{ outline: none; border-color: var(--v-lobby); }
-
   .performer-count{
     flex-basis: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.74rem;
     color: var(--cream-faint);
     margin: 0.2rem 0 0;
@@ -250,7 +238,7 @@
   .day-panel.active{ display:block; }
 
   .empty-note{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     color: var(--cream-faint);
     font-size: 0.88rem;
     padding: 2rem 0;
@@ -267,7 +255,7 @@
 
   .time-col{
     padding-top: 0.85rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.78rem;
     color: var(--cream-faint);
     text-align: right;
@@ -290,7 +278,7 @@
     display:flex;
     align-items:center;
     gap: 0.5rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.92rem;
     font-weight: 600;
     color: var(--accent, var(--cream));
@@ -314,7 +302,7 @@
   .card .time-inline{
     font-size: 0.76rem;
     color: var(--cream-faint);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     margin-right: 0.4rem;
   }
 
@@ -324,7 +312,7 @@
   }
 
   .performer-head{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.98rem;
     font-weight: 600;
     color: var(--cream);
@@ -349,7 +337,7 @@
   .card .day-tag{
     font-size: 0.72rem;
     color: var(--cream-faint);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     margin-right: 0.4rem;
   }
 
@@ -385,7 +373,7 @@
   }
 
   .card .meta{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.76rem;
     color: var(--cream-dim);
     display:flex;
@@ -420,7 +408,7 @@
   .card.open .details{ max-height: 260px; }
 
   .details-inner{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     padding-top: 0.6rem;
     margin-top: 0.55rem;
     border-top: 1px solid var(--hairline);
@@ -490,7 +478,7 @@
 
   /* ---------- Luthiers ---------- */
   .luthier-note{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.78rem;
     color: var(--cream-faint);
     margin: 0 0 1.2rem;
@@ -521,14 +509,14 @@
   }
 
   .luthier-card .l-location{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.74rem;
     color: var(--v-lobby);
     margin: 0 0 0.5rem;
   }
 
   .luthier-card .l-bio{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.82rem;
     line-height: 1.5;
     color: var(--cream-dim);
@@ -572,7 +560,7 @@
     max-width: 980px;
     margin: 0 auto;
     padding: 1.5rem 1.5rem 3rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.74rem;
     color: var(--cream-faint);
   }
@@ -613,7 +601,6 @@
 
   <div class="performer-search-row sans" id="performerSearchRow" style="display:none;">
     <input type="text" class="performer-search" id="performerSearch" placeholder="Search performers…">
-    <select class="performer-select" id="performerSelect"></select>
     <p class="performer-count" id="performerCount"></p>
   </div>
 
@@ -626,9 +613,2207 @@
 </footer>
 
 <script>
-const DATA = [{"date": "Friday, September 18", "time": "3:00 PM", "title": "Luthier Setup", "venue": "Hilton Garden Inn \u2013 Lobby", "type": "Setup", "note": null, "price": null, "end_time": "4:30 PM", "duration_label": "1 hr 30 min", "performers": [], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Friday, September 18", "time": "4:30 PM", "title": "Luthiers, Artists & VVIP Welcome Reception \u2014 Taylor Roberts & Nate Lopez", "venue": "Hilton Garden Inn \u2013 Lobby", "type": "Reception", "note": null, "price": null, "end_time": "5:30 PM", "duration_label": "1 hr", "performers": ["Taylor Roberts", "Nate Lopez"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Friday, September 18", "time": "5:30 PM", "title": "Elden Kelly \u2014 The Blue Guitars", "venue": "Hilton Garden Inn \u2013 Lobby", "type": "Performance", "note": "Part of The Archtop Foundation Presents: The Blue Guitars", "price": null, "end_time": "6:00 PM", "duration_label": "30 min", "performers": ["Elden Kelly"], "luthier": "The Blue Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Friday, September 18", "time": "6:00 PM", "title": "Sean McGowan & Grant Gordy \u2014 The Blue Guitars", "venue": "Hilton Garden Inn \u2013 Lobby", "type": "Performance", "note": null, "price": null, "end_time": "7:00 PM", "duration_label": "1 hr", "performers": ["Sean McGowan", "Grant Gordy"], "luthier": "The Blue Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Friday, September 18", "time": "6:30 PM", "title": "Steve Kovalcheck", "venue": "Olde Town Social", "type": "Performance", "note": "Organ Trio Madness \u2014 hosted by Steve Kovalcheck, featuring Tom Amend (B3 organ) & Brian Claxton (drums)", "price": null, "end_time": "7:00 PM", "duration_label": "30 min", "performers": ["Steve Kovalcheck", "Tom Amend", "Brian Claxton"], "luthier": null, "address": "5610 Yukon St, Arvada, CO"}, {"date": "Friday, September 18", "time": "7:00 PM", "title": "John Storie & Perry Smith \u2014 The Blue Guitars", "venue": "Hilton Garden Inn \u2013 Lobby", "type": "Performance", "note": "Introduction by Pat Kelley", "price": null, "end_time": "8:00 PM", "duration_label": "1 hr", "performers": ["John Storie", "Perry Smith"], "luthier": "The Blue Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Friday, September 18", "time": "7:00 PM", "title": "Mason Razavi", "venue": "Olde Town Social", "type": "Performance", "note": null, "price": null, "end_time": "7:30 PM", "duration_label": "30 min", "performers": ["Mason Razavi", "Tom Amend", "Brian Claxton"], "luthier": null, "address": "5610 Yukon St, Arvada, CO"}, {"date": "Friday, September 18", "time": "7:00 PM", "title": "David Blake", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Performance", "note": "House band: Todd Reid (drums) & Drew Morell (bass)", "price": null, "end_time": "7:30 PM", "duration_label": "30 min", "performers": ["David Blake", "Todd Reid", "Drew Morell"], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Friday, September 18", "time": "7:30 PM", "title": "Paul Asbell", "venue": "Olde Town Social", "type": "Performance", "note": null, "price": null, "end_time": "8:00 PM", "duration_label": "30 min", "performers": ["Paul Asbell", "Tom Amend", "Brian Claxton"], "luthier": null, "address": "5610 Yukon St, Arvada, CO"}, {"date": "Friday, September 18", "time": "7:30 PM", "title": "Rich Severson", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Performance", "note": null, "price": null, "end_time": "8:00 PM", "duration_label": "30 min", "performers": ["Rich Severson", "Todd Reid", "Drew Morell"], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Friday, September 18", "time": "8:00 PM", "title": "Beth Marlis", "venue": "Olde Town Social", "type": "Performance", "note": null, "price": null, "end_time": "8:30 PM", "duration_label": "30 min", "performers": ["Beth Marlis", "Tom Amend", "Brian Claxton"], "luthier": null, "address": "5610 Yukon St, Arvada, CO"}, {"date": "Friday, September 18", "time": "8:00 PM", "title": "BREAK", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Break", "note": null, "price": null, "end_time": "8:30 PM", "duration_label": "30 min", "performers": [], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Friday, September 18", "time": "8:00 PM", "title": "Frank Vignola Trio feat. Pasquale Grasso & Vinny Raniolo", "venue": "Olde Town Pickin Parlor", "type": "Performance", "note": null, "price": "$40 \u2014 SOLD OUT", "end_time": "9:30 PM", "duration_label": "1 hr 30 min", "performers": ["Frank Vignola", "Pasquale Grasso", "Vinny Raniolo"], "luthier": null, "address": "7515 Grandview Ave, Arvada, CO"}, {"date": "Friday, September 18", "time": "8:00 PM", "title": "Rocky Mountain Swing Camp \u2014 Lisa Liu, Greg Ruby & Michael Isabel, featuring Howard Alden", "venue": "Silver Vines Winery", "type": "Workshop / Camp", "note": null, "price": null, "end_time": "10:00 PM", "duration_label": "2 hrs", "performers": ["Lisa Liu", "Greg Ruby", "Michael Isabel", "Howard Alden"], "luthier": null, "address": "7509 Grandview Ave, Arvada, CO"}, {"date": "Friday, September 18", "time": "8:30 PM", "title": "BREAK", "venue": "Olde Town Social", "type": "Break", "note": null, "price": null, "end_time": "9:00 PM", "duration_label": "30 min", "performers": [], "luthier": null, "address": "5610 Yukon St, Arvada, CO"}, {"date": "Friday, September 18", "time": "8:30 PM", "title": "Pat Kelley", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Performance", "note": null, "price": null, "end_time": "9:00 PM", "duration_label": "30 min", "performers": ["Pat Kelley", "Todd Reid", "Drew Morell"], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Friday, September 18", "time": "9:00 PM", "title": "Perry Smith", "venue": "Olde Town Social", "type": "Performance", "note": null, "price": null, "end_time": "9:30 PM", "duration_label": "30 min", "performers": ["Perry Smith", "Tom Amend", "Brian Claxton"], "luthier": null, "address": "5610 Yukon St, Arvada, CO"}, {"date": "Friday, September 18", "time": "9:00 PM", "title": "Davy Mooney", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Performance", "note": null, "price": null, "end_time": "9:30 PM", "duration_label": "30 min", "performers": ["Davy Mooney", "Todd Reid", "Drew Morell"], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Friday, September 18", "time": "9:30 PM", "title": "Brad Rabuchin", "venue": "Olde Town Social", "type": "Performance", "note": null, "price": null, "end_time": "10:00 PM", "duration_label": "30 min", "performers": ["Brad Rabuchin", "Tom Amend", "Brian Claxton"], "luthier": null, "address": "5610 Yukon St, Arvada, CO"}, {"date": "Friday, September 18", "time": "9:30 PM", "title": "BREAK", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Break", "note": null, "price": null, "end_time": "10:00 PM", "duration_label": "30 min", "performers": [], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Friday, September 18", "time": "10:00 PM", "title": "Fareed Haque", "venue": "Olde Town Social", "type": "Performance", "note": null, "price": null, "end_time": "10:30 PM", "duration_label": "30 min", "performers": ["Fareed Haque", "Tom Amend", "Brian Claxton"], "luthier": null, "address": "5610 Yukon St, Arvada, CO"}, {"date": "Friday, September 18", "time": "10:00 PM", "title": "Ulf Wakenius", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Performance", "note": null, "price": null, "end_time": "10:30 PM", "duration_label": "30 min", "performers": ["Ulf Wakenius", "Todd Reid", "Drew Morell"], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Friday, September 18", "time": "10:30 PM", "title": "Ricardo Grilli", "venue": "Olde Town Social", "type": "Performance", "note": null, "price": null, "end_time": "11:00 PM", "duration_label": "30 min", "performers": ["Ricardo Grilli", "Tom Amend", "Brian Claxton"], "luthier": null, "address": "5610 Yukon St, Arvada, CO"}, {"date": "Friday, September 18", "time": "10:30 PM", "title": "Barry Greene", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Performance", "note": null, "price": null, "end_time": "11:00 PM", "duration_label": "~30 min", "performers": ["Barry Greene", "Todd Reid", "Drew Morell"], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Saturday, September 19", "time": "8:30 AM", "title": "Tom Ribbecke \u2014 Compliant Rim Guitars", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "9:30 AM", "duration_label": "1 hr", "performers": [], "luthier": "Ribbecke Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "9:30 AM", "title": "Frank Vignola", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "10:30 AM", "duration_label": "1 hr", "performers": ["Frank Vignola"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "10:00 AM", "title": "Luthier Exhibition", "venue": "Hilton Garden Inn \u2013 Wadsworth Ballroom", "type": "Exhibition", "note": null, "price": null, "end_time": "5:00 PM", "duration_label": "7 hrs", "performers": [], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "10:00 AM", "title": "Tremblay Guitars \u2014 Martin Tremblay", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "10:30 AM", "duration_label": "30 min", "performers": ["Martin Tremblay"], "luthier": "Martin Tremblay Luthier", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "10:00 AM", "title": "Rich Severson", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "11:00 AM", "duration_label": "1 hr", "performers": ["Rich Severson"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "10:30 AM", "title": "Bayard Guitars \u2014 Tim Ferrell", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "11:00 AM", "duration_label": "30 min", "performers": ["Tim Ferrell"], "luthier": "Bayard Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "10:30 AM", "title": "Pasquale Grasso", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "11:30 AM", "duration_label": "1 hr", "performers": ["Pasquale Grasso"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "11:00 AM", "title": "Beno\u00eet Lavoie Luthier \u2014 TBD", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "11:30 AM", "duration_label": "30 min", "performers": [], "luthier": "Beno\u00eet Lavoie Luthier", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "11:00 AM", "title": "Tim Ferrell", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "12:00 PM", "duration_label": "1 hr", "performers": ["Tim Ferrell"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "11:30 AM", "title": "Mirabella Guitars \u2014 Perry Smith", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "12:00 PM", "duration_label": "30 min", "performers": ["Perry Smith"], "luthier": "Mirabella Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "11:30 AM", "title": "Tom Nania \u2014 Archtop Guitar Dynamics", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": "An in-depth study into the physics of the archtop guitar", "price": null, "end_time": "12:30 PM", "duration_label": "1 hr", "performers": ["Tom Nania"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "12:00 PM", "title": "Linda Manzer Guitars \u2014 Ted Ludwig", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "12:30 PM", "duration_label": "30 min", "performers": ["Ted Ludwig"], "luthier": "Manzer Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "12:00 PM", "title": "Perry Smith", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "1:00 PM", "duration_label": "1 hr", "performers": ["Perry Smith"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "12:00 PM", "title": "Alan Kwan", "venue": "Method and Muse Distillery", "type": "Performance", "note": null, "price": null, "end_time": "1:00 PM", "duration_label": "1 hr", "performers": ["Alan Kwan"], "luthier": null, "address": "7513 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "12:30 PM", "title": "Majestyk Guitars \u2014 Ted Ludwig & Steve Kovalcheck", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "1:00 PM", "duration_label": "30 min", "performers": ["Ted Ludwig", "Steve Kovalcheck"], "luthier": "Majestyk Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "12:30 PM", "title": "Paul Ricci", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "1:30 PM", "duration_label": "1 hr", "performers": ["Paul Ricci"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "1:00 PM", "title": "Brown Guitars \u2014 Sean McGowan & Donovan Raitt", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "1:30 PM", "duration_label": "30 min", "performers": ["Sean McGowan", "Donovan Raitt"], "luthier": "Brown Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "1:00 PM", "title": "Ted Ludwig", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "2:00 PM", "duration_label": "1 hr", "performers": ["Ted Ludwig"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "1:00 PM", "title": "Ricardo Grilli", "venue": "Method and Muse Distillery", "type": "Performance", "note": null, "price": null, "end_time": "2:00 PM", "duration_label": "1 hr", "performers": ["Ricardo Grilli"], "luthier": null, "address": "7513 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "1:30 PM", "title": "Combs Instruments \u2014 Jonathan Stout", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "2:00 PM", "duration_label": "30 min", "performers": ["Jonathan Stout"], "luthier": "Combs Instruments", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "1:30 PM", "title": "Sean McGowan \u2014 The Holistic Guitarist", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": "Healthy stretching, practicing habits & overall wellness for guitarists", "price": null, "end_time": "2:30 PM", "duration_label": "1 hr", "performers": ["Sean McGowan"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "2:00 PM", "title": "Brad Corney Guitars \u2014 TBD", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "2:30 PM", "duration_label": "30 min", "performers": [], "luthier": "Brad Corney Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "2:00 PM", "title": "Wayne Goins", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "3:00 PM", "duration_label": "1 hr", "performers": ["Wayne Goins"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "2:00 PM", "title": "Pat Kelley w/ John Storie (maybe Perry Smith)", "venue": "Method and Muse Distillery", "type": "Performance", "note": "If his flight hasn't left yet", "price": null, "end_time": "3:00 PM", "duration_label": "1 hr", "performers": ["Pat Kelley", "John Storie", "Perry Smith"], "luthier": null, "address": "7513 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "2:30 PM", "title": "D'Arcy Guitars \u2014 David Blake", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "3:00 PM", "duration_label": "30 min", "performers": ["David Blake"], "luthier": "D'Arcy Blake (D'Arcy Guitars)", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "2:30 PM", "title": "Ulf Wakenius", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "3:30 PM", "duration_label": "1 hr", "performers": ["Ulf Wakenius"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "3:00 PM", "title": "Doolin Guitars \u2014 Mike Doolin", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "3:30 PM", "duration_label": "30 min", "performers": ["Mike Doolin"], "luthier": "Doolin Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "3:00 PM", "title": "Paul Asbell", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "4:00 PM", "duration_label": "1 hr", "performers": ["Paul Asbell"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "3:00 PM", "title": "Shawn Purcell w/ Wayne Wilkinson", "venue": "Method and Muse Distillery", "type": "Performance", "note": null, "price": null, "end_time": "4:00 PM", "duration_label": "1 hr", "performers": ["Shawn Purcell", "Wayne Wilkinson"], "luthier": null, "address": "7513 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "3:30 PM", "title": "Comins Guitars \u2014 Ted Ludwig", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "4:00 PM", "duration_label": "30 min", "performers": ["Ted Ludwig"], "luthier": "Comins Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "3:30 PM", "title": "Fareed Haque", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "5:00 PM", "duration_label": "1 hr 30 min", "performers": ["Fareed Haque"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "4:00 PM", "title": "Hikaru Customs \u2014 TBD", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "4:30 PM", "duration_label": "30 min", "performers": [], "luthier": "Hikaru Customs", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "4:00 PM", "title": "Barry Greene", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "5:00 PM", "duration_label": "~1 hr", "performers": ["Barry Greene"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "4:00 PM", "title": "Taylor Roberts", "venue": "Method and Muse Distillery", "type": "Performance", "note": null, "price": null, "end_time": "5:00 PM", "duration_label": "1 hr", "performers": ["Taylor Roberts"], "luthier": null, "address": "7513 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "4:00 PM", "title": "Tommy Benson", "venue": "Silver Vines Winery", "type": "Performance", "note": null, "price": null, "end_time": "5:00 PM", "duration_label": "1 hr", "performers": ["Tommy Benson"], "luthier": null, "address": "7509 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "4:30 PM", "title": "LHT Guitars \u2014 Sean McGowan", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "5:00 PM", "duration_label": "30 min", "performers": ["Sean McGowan"], "luthier": "LHT Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "5:00 PM", "title": "Benedetto Guitars \u2014 Wayne Goins & Wayne Wilkinson", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "5:30 PM", "duration_label": "30 min", "performers": ["Wayne Goins", "Wayne Wilkinson"], "luthier": "Benedetto Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "5:00 PM", "title": "David Becker Performs: PLANETS", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Performance", "note": "Projections of the cosmos merged with masterfully composed & improvised melodies", "price": null, "end_time": "6:30 PM", "duration_label": "~1 hr 30 min", "performers": ["David Becker"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "5:00 PM", "title": "Rich Severson", "venue": "Method and Muse Distillery", "type": "Performance", "note": null, "price": null, "end_time": "6:00 PM", "duration_label": "1 hr", "performers": ["Rich Severson"], "luthier": null, "address": "7513 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "5:00 PM", "title": "Mark Kleinhaut & Nate Lopez", "venue": "Silver Vines Winery", "type": "Performance", "note": null, "price": null, "end_time": "6:00 PM", "duration_label": "1 hr", "performers": ["Mark Kleinhaut", "Nate Lopez"], "luthier": null, "address": "7509 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "5:30 PM", "title": "Joint Forces Guitar Quartet", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Performance", "note": "Ben Turner, Geoff Reecer, Alan Prather & Jan Knutsen", "price": null, "end_time": "8:00 PM", "duration_label": "2 hr 30 min", "performers": ["Ben Turner", "Geoff Reecer", "Alan Prather", "Jan Knutsen"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "6:00 PM", "title": "Beth Marlis, Jocelyn Gould & Lisa Liu", "venue": "Method and Muse Distillery", "type": "Performance", "note": null, "price": null, "end_time": "7:00 PM", "duration_label": "1 hr", "performers": ["Beth Marlis", "Jocelyn Gould", "Lisa Liu"], "luthier": null, "address": "7513 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "6:00 PM", "title": "Donovan Raitt & Tim Lerch (Bram Guitars)", "venue": "Silver Vines Winery", "type": "Performance", "note": null, "price": null, "end_time": "7:00 PM", "duration_label": "1 hr", "performers": ["Donovan Raitt", "Tim Lerch"], "luthier": "Tim Bram Guitars", "address": "7509 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "7:00 PM", "title": "Brad Rabuchin & David Becker", "venue": "Method and Muse Distillery", "type": "Performance", "note": null, "price": null, "end_time": "8:00 PM", "duration_label": "1 hr", "performers": ["Brad Rabuchin", "David Becker"], "luthier": null, "address": "7513 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "7:00 PM", "title": "Tim Lerch (Wald Guitars)", "venue": "Silver Vines Winery", "type": "Performance", "note": null, "price": null, "end_time": "8:00 PM", "duration_label": "1 hr", "performers": ["Tim Lerch"], "luthier": "Wald Guitars", "address": "7509 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "7:00 PM", "title": "Bruce Forman's Red Guitar", "venue": "Olde Town Pickin Parlor", "type": "Performance", "note": null, "price": "$40", "end_time": "7:30 PM", "duration_label": "~30 min", "performers": ["Bruce Forman"], "luthier": null, "address": "7515 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "7:00 PM", "title": "Jonathan Stout", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Performance", "note": null, "price": null, "end_time": "8:00 PM", "duration_label": "1 hr", "performers": ["Jonathan Stout"], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Saturday, September 19", "time": "8:00 PM", "title": "Benedetto All-Stars!", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Performance", "note": "Ron Bland (bass) & Todd Reid (drums) backing Barry Greene, Beth Marlis, Davy Mooney, Howard Alden, Jackson Evans, Jocelyn Gould, Pat Kelley, Shawn Purcell, Taylor Roberts, Ulf Wakenius, Wayne Goins & Wayne Wilkinson", "price": null, "end_time": "10:30 PM", "duration_label": "~2 hr 30 min", "performers": ["Ron Bland", "Todd Reid", "Barry Greene", "Beth Marlis", "Davy Mooney", "Howard Alden", "Jackson Evans", "Jocelyn Gould", "Pat Kelley", "Shawn Purcell", "Taylor Roberts", "Ulf Wakenius", "Wayne Goins", "Wayne Wilkinson"], "luthier": "Benedetto Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Saturday, September 19", "time": "8:00 PM", "title": "Paul Ricci", "venue": "Method and Muse Distillery", "type": "Performance", "note": null, "price": null, "end_time": "9:00 PM", "duration_label": "1 hr", "performers": ["Paul Ricci"], "luthier": null, "address": "7513 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "8:00 PM", "title": "Rocky Mountain Swing Camp \u2014 Lisa Liu, Greg Ruby & Michael Isabel, featuring Jonathan Stout", "venue": "Silver Vines Winery", "type": "Workshop / Camp", "note": null, "price": null, "end_time": "10:00 PM", "duration_label": "2 hrs", "performers": ["Lisa Liu", "Greg Ruby", "Michael Isabel", "Jonathan Stout"], "luthier": null, "address": "7509 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "8:00 PM", "title": "Mason Razavi", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Performance", "note": null, "price": null, "end_time": "9:00 PM", "duration_label": "1 hr", "performers": ["Mason Razavi"], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Saturday, September 19", "time": "9:00 PM", "title": "Ted Ludwig & Friends", "venue": "Method and Muse Distillery", "type": "Performance", "note": null, "price": null, "end_time": null, "duration_label": "Until close", "performers": ["Ted Ludwig"], "luthier": null, "address": "7513 Grandview Ave, Arvada, CO"}, {"date": "Saturday, September 19", "time": "9:00 PM", "title": "Sean McGowan & Grant Gordy", "venue": "Arvada Tavern Speakeasy Tiki", "type": "Performance", "note": null, "price": null, "end_time": "10:00 PM", "duration_label": "~1 hr", "performers": ["Sean McGowan", "Grant Gordy"], "luthier": null, "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"}, {"date": "Sunday, September 20", "time": "9:30 AM", "title": "PANEL: Mic'ing Techniques for Archtop Guitars \u2014 John McVey & Mark Kleinhaut", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "10:30 AM", "duration_label": "1 hr", "performers": ["John McVey", "Mark Kleinhaut"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "10:00 AM", "title": "Luthier Exhibition", "venue": "Hilton Garden Inn \u2013 Wadsworth Ballroom", "type": "Exhibition", "note": null, "price": null, "end_time": "3:00 PM", "duration_label": "5 hrs", "performers": [], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "10:00 AM", "title": "Marchoine Guitars \u2014 John Storie", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "10:30 AM", "duration_label": "30 min", "performers": ["John Storie"], "luthier": "Marchione Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "10:00 AM", "title": "David Becker", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "11:00 AM", "duration_label": "1 hr", "performers": ["David Becker"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "10:30 AM", "title": "D'Ambrosio Guitars \u2014 Ricardo Grilli & Ted Ludwig", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "11:00 AM", "duration_label": "30 min", "performers": ["Ricardo Grilli", "Ted Ludwig"], "luthier": "D'Ambrosio Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "10:30 AM", "title": "Jocelyn Gould", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "11:30 AM", "duration_label": "1 hr", "performers": ["Jocelyn Gould"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "11:00 AM", "title": "Odashima Guitars \u2014 TBD", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "11:30 AM", "duration_label": "30 min", "performers": [], "luthier": "Odashima Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "11:00 AM", "title": "John Storie", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "12:00 PM", "duration_label": "1 hr", "performers": ["John Storie"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "11:30 AM", "title": "Rob Goldberg Handmade Guitars \u2014 Wayne Tollefsen", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "12:00 PM", "duration_label": "30 min", "performers": ["Wayne Tollefsen"], "luthier": "Rob Goldberg Handmade Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "11:30 AM", "title": "Beth Marlis \u2014 Jimmy Wyble's Musical Legacy", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "12:30 PM", "duration_label": "1 hr", "performers": ["Beth Marlis"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "12:00 PM", "title": "Rose-Zadow Instruments \u2014 TBD", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "12:30 PM", "duration_label": "30 min", "performers": [], "luthier": "Rose-Zadow Instruments", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "12:00 PM", "title": "Davy Mooney", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "1:00 PM", "duration_label": "1 hr", "performers": ["Davy Mooney"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "12:30 PM", "title": "Sonntag Guitars \u2014 Bruce Forman", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "1:00 PM", "duration_label": "30 min", "performers": ["Bruce Forman"], "luthier": "Sonntag Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "12:30 PM", "title": "Jonathan Stout \u2014 Chord Melody", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "1:30 PM", "duration_label": "1 hr", "performers": ["Jonathan Stout"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "1:00 PM", "title": "Tikatoo Guitars \u2014 Ben Kahler", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "1:30 PM", "duration_label": "30 min", "performers": ["Ben Kahler"], "luthier": "Tikatoo Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "1:00 PM", "title": "Tim Lerch", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "2:00 PM", "duration_label": "1 hr", "performers": ["Tim Lerch"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "1:00 PM", "title": "Tim Farrell", "venue": "Silver Vines Winery", "type": "Performance", "note": null, "price": null, "end_time": "2:00 PM", "duration_label": "1 hr", "performers": ["Tim Farrell"], "luthier": null, "address": "7509 Grandview Ave, Arvada, CO"}, {"date": "Sunday, September 20", "time": "1:30 PM", "title": "Tim Bram Guitars \u2014 Tim Lerch & Donovan Raitt", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "2:00 PM", "duration_label": "30 min", "performers": ["Tim Lerch", "Donovan Raitt"], "luthier": "Tim Bram Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "1:30 PM", "title": "Bruce Forman", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "2:30 PM", "duration_label": "1 hr", "performers": ["Bruce Forman"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "2:00 PM", "title": "Tim Frick Guitars \u2014 Mason Razavi", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "2:30 PM", "duration_label": "30 min", "performers": ["Mason Razavi"], "luthier": "Tim Frick Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "2:00 PM", "title": "Shawn Purcell", "venue": "Hilton Garden Inn \u2013 Room 119", "type": "Workshop", "note": null, "price": null, "end_time": "3:00 PM", "duration_label": "~1 hr", "performers": ["Shawn Purcell"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "2:00 PM", "title": "Howard Alden & Greg Ruby", "venue": "Silver Vines Winery", "type": "Performance", "note": null, "price": null, "end_time": "3:00 PM", "duration_label": "~1 hr", "performers": ["Howard Alden", "Greg Ruby"], "luthier": null, "address": "7509 Grandview Ave, Arvada, CO"}, {"date": "Sunday, September 20", "time": "2:30 PM", "title": "Wald Guitars \u2014 Tim Lerch", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "3:00 PM", "duration_label": "30 min", "performers": ["Tim Lerch"], "luthier": "Wald Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "2:30 PM", "title": "Howard Alden", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Workshop / Presentation", "note": null, "price": null, "end_time": "3:30 PM", "duration_label": "~1 hr", "performers": ["Howard Alden"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "3:00 PM", "title": "Ribbecke Guitars \u2014 Mark Kleinhaut & Paul Asbell", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "3:30 PM", "duration_label": "30 min", "performers": ["Mark Kleinhaut", "Paul Asbell"], "luthier": "Ribbecke Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "3:30 PM", "title": "German Guitars \u2014 TBD", "venue": "Hilton Garden Inn \u2013 Lobby Stage", "type": "Luthier Showcase", "note": null, "price": null, "end_time": "4:00 PM", "duration_label": "~30 min", "performers": [], "luthier": "German Guitars", "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "6:00 PM", "title": "Wolfgang Muthspiel", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Performance", "note": "Main Event", "price": "$40", "end_time": "7:00 PM", "duration_label": "1 hr", "performers": ["Wolfgang Muthspiel"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}, {"date": "Sunday, September 20", "time": "7:00 PM", "title": "The TransAtlantic Guitar Trio \u2014 Richard Smith, Joscho Stefan & Rory Hoffman", "venue": "Hilton Garden Inn \u2013 Swadley Ballroom", "type": "Performance", "note": "Main Event", "price": "$40", "end_time": "8:00 PM", "duration_label": "~1 hr", "performers": ["Richard Smith", "Joscho Stefan", "Rory Hoffman"], "luthier": null, "address": "5545 Olde Wadsworth Blvd, Arvada, CO"}];
-const LUTHIERS = [{"name": "Benedetto Guitars", "location": "Savannah, GA", "url": "https://www.benedettoguitars.com/", "bio": "Founded in 1968 by luthier Robert Benedetto, celebrating over 50 years of jazz guitar excellence, building some of the world's most collectible archtops.", "instagram": "https://www.instagram.com/benedetto_guitars/"}, {"name": "Maegen Wells Guitars and Mandolins", "location": "Forestville, CA", "url": "http://www.maegenwellsguitars.com/", "bio": "Handcrafted guitars and mandolins built one at a time on a busy bench full of sawdust, tools, and glue.", "instagram": "https://www.instagram.com/maegenwellsguitars/"}, {"name": "LHT Guitars", "location": "Healdsburg, CA", "url": "https://www.lhtguitars.com/", "bio": "Each guitar built from start to finish by hand, from a hand-drawn full-scale blueprint through to the final finish.", "instagram": "https://www.instagram.com/lhtguitars/"}, {"name": "Beauregard Guitars", "location": "Montreal, Canada", "url": "http://beauregardguitars.com/", "bio": "Montreal-based lutherie shop building archtop and gypsy-jazz guitars.", "instagram": "https://www.instagram.com/beauregardguitars/"}, {"name": "Martin Tremblay Luthier", "location": "Montreal, Canada", "url": "https://www.tremblayluthier.com/", "bio": "Renowned for archtop and gypsy jazz guitars since 2002, with instruments played by Bireli Lagrene and Denis Chang; mentored by Mario Beauregard and Ken Parker.", "instagram": "https://www.instagram.com/tremblay_luthier/"}, {"name": "D'Ambrosio Guitars", "location": "Los Angeles, CA", "url": "https://www.dambrosioguitars.com/", "bio": "One-of-a-kind archtops built for discerning artists, dealers, and patrons using curated, aged tonewoods.", "instagram": "https://www.instagram.com/ottodambrosio/"}, {"name": "Brown Guitars", "location": "Los Angeles, CA", "url": "https://brown.guitars/", "bio": "Tad Brown has handcrafted guitars since 1996, known in Southern California for fine setup and fretwork, and for exceptional acoustic responsiveness.", "instagram": "https://www.instagram.com/brown_guitars/"}, {"name": "German Guitars", "location": "Broomfield, CO", "url": "http://germanguitars.com/", "bio": "One-man shop treating each guitar as a living, functional sculpture rather than a factory product."}, {"name": "Tim Frick Guitars", "location": "San Francisco, CA", "url": "https://timfrickguitars.com/", "bio": "Built his first archtop after taking Tom Ribbecke's class in 1995; has since worked with Gary Brawer and Frank Ford before focusing on archtop repair and building.", "instagram": "https://www.instagram.com/timfrickguitars/"}, {"name": "Sonntag Guitars", "location": "Augsburg, Germany", "url": "https://sonntag-guitars.com/", "bio": "Hand-crafts archtop jazz guitars exclusively, using no prefabricated parts and wood air-dried for at least five years.", "instagram": "https://www.instagram.com/sonntaggitarrenbau/"}, {"name": "D'Arcy Blake (D'Arcy Guitars)", "location": "Brooklyn, NY", "url": "https://www.darcyguitars.com/", "bio": "Founded in 2020 after a career shift from art history; the flagship Figure Zero was designed with twin brother, jazz guitarist David Blake.", "instagram": "https://www.instagram.com/darcy.guitars/"}, {"name": "Marchione Guitars", "location": "Houston, TX", "url": "https://marchione.com/", "bio": "Stephen Marchione began building in 1990, trained under John Suhr, and opened his first New York shop in 1993 before returning to his hometown of Houston in 2001.", "instagram": "https://www.instagram.com/marchioneguitars/"}, {"name": "Manzer Guitars", "location": "Toronto, Canada", "url": "https://manzer.com/", "bio": "Linda Manzer has been building guitars since 1974.", "instagram": "https://www.instagram.com/manzerguitars/"}, {"name": "Beno\u00eet Lavoie Luthier", "location": "Qu\u00e9bec, Canada", "url": "https://www.benoitlavoie.com/", "bio": "Instrument making at the convergence of art and science.", "instagram": "https://www.instagram.com/benoitlavoieluthier/"}, {"name": "Brad Corney Guitars", "location": "Santa Rosa, CA", "url": "https://www.bradcorneyguitars.com/", "bio": "Acoustic archtops inspired by the 1920s and '30s, built with old-world glues, finishes, and craftsmanship."}, {"name": "Mirabella Guitars", "location": "Saint James, NY", "url": "https://www.mirabellaguitars.com/", "bio": "Cristian Mirabella, with over 40 years of experience, is a premier archtop builder and top restorer of vintage D'Angelico, D'Aquisto, and golden-era Gibson instruments.", "instagram": "https://www.instagram.com/mirabellaguitars/"}, {"name": "Scharpach Master Guitars", "location": "Wellerlooi, Netherlands", "url": "https://scharpach.com/", "bio": "Theo Scharpach has led innovative archtop design for over 40 years, building for players including Steve Howe, Randy Bachman, and Al Di Meola.", "instagram": "https://www.instagram.com/scharpachmasterguitar/"}, {"name": "Bayard Guitars", "location": "", "url": "https://www.bayardguitars.com/", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.", "instagram": "https://www.instagram.com/bayard_guitars/"}, {"name": "Combs Instruments", "location": "", "url": "http://www.combsinstruments.com/", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.", "instagram": "https://www.instagram.com/combsinstruments/"}, {"name": "Comins Guitars", "location": "", "url": "https://www.cominsguitars.com/", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.", "instagram": "https://www.instagram.com/cominsguitars/"}, {"name": "Doolin Guitars", "location": "", "url": "http://doolinguitars.com/", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.", "instagram": "https://www.instagram.com/doolinguitars/"}, {"name": "Hikaru Customs", "location": "", "url": "", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/."}, {"name": "Majestyk Guitars", "location": "", "url": "https://www.majestykguitars.com/", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.", "instagram": "https://www.instagram.com/majestykguitarsfc/"}, {"name": "Odashima Guitars", "location": "", "url": "http://odashima-guitars.com/", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.", "instagram": "https://www.instagram.com/odashimaguitars/"}, {"name": "Ribbecke Guitars", "location": "", "url": "http://www.rgcguitars.com/", "bio": "Tom Ribbecke's archtop and Halfling-design guitars, handbuilt in Northern California since the early 1970s; Ribbecke Guitar Corporation (RGC) produces a more affordable production line under his supervision."}, {"name": "Rob Goldberg Handmade Guitars", "location": "", "url": "https://www.robgoldberghandmadeguitars.com/", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/."}, {"name": "Rose-Zadow Instruments", "location": "", "url": "", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.", "instagram": "https://www.instagram.com/malcolmrosezadow/"}, {"name": "Tikatoo Guitars", "location": "", "url": "https://tikatooguitars.com/", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.", "instagram": "https://www.instagram.com/tikatooguitars/"}, {"name": "Tim Bram Guitars", "location": "", "url": "https://www.timbramguitars.com/", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.", "instagram": "https://www.instagram.com/timbramguitars/"}, {"name": "Wald Guitars", "location": "", "url": "https://waldguitars.com/", "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.", "instagram": "https://www.instagram.com/waldguitars/"}, {"name": "The Blue Guitars", "location": "Burlington, VT (The Archtop Foundation)", "url": "https://theblueguitars.com/", "bio": "A collection of 22 blue-finished archtop guitars commissioned in the 1990s by collector Scott Chinery, each built by a different master luthier to the same specs as a tribute to Jimmy D'Aquisto. Now owned and toured by the nonprofit Archtop Foundation.", "instagram": "https://www.instagram.com/theblueguitars/"}, {"name": "Wilkie Stringed Instruments", "location": "Comox Valley, Vancouver Island, BC, Canada", "url": "https://wilkiestringedinstruments.com/", "bio": "Wyatt Wilkie hand-carves archtop guitars and mandolins, including the flagship Northern Flyer mandolin; self-taught, he later apprenticed with archtop icon Bob Benedetto."}, {"name": "Zimnicki Guitars", "location": "Allen Park, MI", "url": "https://zimnicki.com/", "bio": "Gary Zimnicki has hand-built custom guitars and mandolins since 1980, working flexibly with each customer to design instruments matched to their needs and tastes."}];
-const PERFORMER_LINKS = {"Frank Vignola": {"instagram": "https://www.instagram.com/frankvignolaguitar/", "spotify": "https://open.spotify.com/artist/0AJD75yBfnawqdsZ9lvIxw", "website": "https://www.frankvignola.com/"}, "Pasquale Grasso": {"instagram": "https://www.instagram.com/pasqualegrassomusic/", "spotify": "https://open.spotify.com/artist/7M6Meoc3uCzIyRP7V8HQQY", "website": "https://www.pasqualegrasso.com/"}, "Howard Alden": {"instagram": "https://www.instagram.com/howard.v.alden/", "spotify": "https://open.spotify.com/artist/7sgBK9xjqtnAFTfm2SvWMR", "website": "https://howardalden.com/"}, "Ulf Wakenius": {"instagram": "https://www.instagram.com/ulfwakeniusguitar/", "spotify": "https://open.spotify.com/artist/15hIJXUw2c1byTN5dqeYaJ"}, "Fareed Haque": {"instagram": "https://www.instagram.com/fareedhaque/", "spotify": "https://open.spotify.com/artist/71hW2OzJ7qdRzysgKktqyN", "website": "https://fareed.com/"}, "Wolfgang Muthspiel": {"instagram": "https://www.instagram.com/wolfgangmuthspiel/", "spotify": "https://open.spotify.com/artist/7a7Vs88vzOcmHh4GOpUEJJ", "website": "http://www.wolfgangmuthspiel.com"}, "Jonathan Stout": {"instagram": "https://www.instagram.com/campusfive/", "spotify": "https://open.spotify.com/artist/63DfvceFDGep3KG2WqWN74", "website": "https://www.campusfive.com/"}, "Sean McGowan": {"instagram": "https://www.instagram.com/seanmcgowanguitar/", "spotify": "https://open.spotify.com/artist/2Msw16MmR5pjJKrE2RlpGz", "website": "https://seanmcgowanguitar.com/"}, "Bruce Forman": {"instagram": "https://www.instagram.com/formanism/", "spotify": "https://open.spotify.com/artist/63mL01Tg35HOMl19uzA7kL", "website": "https://www.bruceforman.com/"}, "Jocelyn Gould": {"instagram": "https://www.instagram.com/jocelyngouldmusic/", "spotify": "https://open.spotify.com/artist/0KOhfBkfEdH7cdjIgfQULJ", "website": "https://www.jocelyngould.com/"}, "Barry Greene": {"instagram": "https://www.instagram.com/barrygreenevideolessons/", "spotify": "https://open.spotify.com/artist/53XUhgFyb3LmUooPa57ypy", "website": "https://www.barrygreene.com/"}, "Ted Ludwig": {"instagram": "https://www.instagram.com/tedludwigjazz/", "spotify": "https://open.spotify.com/artist/0cyqWumlYCxrN2Olg5Do2D", "website": "https://www.tedludwig.com/"}, "Tim Lerch": {"instagram": "https://www.instagram.com/timlerch.guitarist/", "website": "https://www.timlerch.com/"}, "Davy Mooney": {"instagram": "https://www.instagram.com/davymooney/", "spotify": "https://open.spotify.com/artist/4d73pkSAEvk4LdXH4DTyxq", "website": "https://davymooney.bandcamp.com/"}, "Ricardo Grilli": {"instagram": "https://www.instagram.com/ricardogrilli/", "spotify": "https://open.spotify.com/artist/30QYGxMSf3ftpWwdOr8XAb", "website": "http://www.ricardogrilli.com"}, "Perry Smith": {"instagram": "https://www.instagram.com/perrysmithmusic/", "spotify": "https://open.spotify.com/intl-de/artist/4Lf1IYYdNwIehVqkZCqACK", "website": "https://perrysmithmusic.com/"}, "Grant Gordy": {"instagram": "https://www.instagram.com/grantgordy/", "spotify": "https://open.spotify.com/artist/4PEBfkLb0yruw3ki661c9q", "website": "https://www.grantgordy.com/"}, "Elden Kelly": {"instagram": "https://www.instagram.com/eldenkellymusic/", "spotify": "https://open.spotify.com/artist/4AMCIB22ZsWDtse3KnUmbL", "website": "http://www.eldenkelly.com"}, "Rich Severson": {"instagram": "https://www.instagram.com/richseversonjazz/", "spotify": "https://open.spotify.com/artist/47m7d6d9Xr6Y4ie0NrcXwI", "website": "https://www.guitarcollege.net/"}, "Beth Marlis": {"website": "https://www.bethmarlis.com/", "instagram": "https://www.instagram.com/bethmarlis/"}, "Pat Kelley": {"website": "https://patkelley.com"}, "Shawn Purcell": {"website": "https://www.shawnpurcell.com", "instagram": "https://www.instagram.com/shawnpurcell71/", "spotify": "https://open.spotify.com/artist/7BlOdNF7c5Q2R8SqWF7Y4R"}, "David Blake": {"website": "https://www.davidblakemusic.com/", "instagram": "https://www.instagram.com/davidblakeguitar/", "spotify": "https://open.spotify.com/artist/6c51V0ogHEnhSzporI7J2E"}, "Tim Farrell": {"website": "https://www.timfarrellmusic.com/", "instagram": "https://www.instagram.com/timfarrellmusic/", "spotify": "https://open.spotify.com/artist/2ZUazTgHPZia5PfuXsTtyu"}, "John Storie": {"website": "http://www.johnstorie.com/", "instagram": "https://www.instagram.com/jazzstorie/"}, "Lisa Liu": {"website": "https://lisaliuguitar.com/", "instagram": "https://www.instagram.com/lisaliuguitar/"}, "Mason Razavi": {"website": "http://www.masonrazavi.com/", "instagram": "https://www.instagram.com/masonrazavi/", "spotify": "https://open.spotify.com/artist/5vMll89aIUku9x7qYZJHhF"}, "Nate Lopez": {"website": "https://natelopez.com/", "instagram": "https://www.instagram.com/natelopezmusic/"}, "Paul Asbell": {"website": "https://paulasbell.com/"}, "Paul Ricci": {"website": "https://mafaldaminnozzi.com/album/cool-romantics-en/"}, "Taylor Roberts": {"website": "https://www.taylorrobertsguitarist.com", "instagram": "https://www.instagram.com/tr7guitar/", "spotify": "https://open.spotify.com/artist/2dyIV7FcMYBSsBLhqCHtwN"}, "Wayne Wilkinson": {"website": "http://waynewilkinson.com/", "instagram": "https://www.instagram.com/coguitarist/"}, "Brad Rabuchin": {"website": "https://bradrabuchin.net/", "instagram": "https://www.instagram.com/rabuchinbrad/"}, "Donovan Raitt": {"website": "http://www.donovanraitt.com/", "instagram": "https://www.instagram.com/donovanraitt/"}, "David Becker": {"website": "https://davidbeckertribune.com/", "instagram": "https://www.instagram.com/dabetrib/", "spotify": "https://open.spotify.com/artist/0AkOcG92q7RjZgQuXX8pKe"}, "Wayne Goins": {"website": "https://waynegoins.com/", "spotify": "https://open.spotify.com/artist/316rAhHKjMLyoBjnYqrEda"}, "Steve Kovalcheck": {"website": "https://www.kovalcheckmusic.com/", "instagram": "http://instagram.com/stevekovalcheck"}, "Mark Kleinhaut": {"website": "https://markkleinhaut.com/"}, "Greg Ruby": {"website": "https://gregrubymusic.com/", "instagram": "https://www.instagram.com/gregrubymusic/"}, "Joscho Stefan": {"website": "https://joscho-stephan.de/en", "instagram": "https://www.instagram.com/joschostephan/", "spotify": "https://open.spotify.com/artist/03gMsWBnlCYwx7ivVnO0WG"}, "Richard Smith": {"website": "https://richardsmithmusic.com/", "instagram": "https://www.instagram.com/richardsmithmusic/"}, "Rory Hoffman": {"website": "https://www.roryhoffman.com/"}, "Vinny Raniolo": {"website": "https://www.vinnyraniolo.com/", "instagram": "https://www.instagram.com/vinnyraniolo/"}, "Alan Kwan": {"website": "https://alankwanmusic.com/", "instagram": "https://www.instagram.com/alankwanmusic/"}, "Tom Nania": {"website": "https://archtopproject.org/", "instagram": "https://www.instagram.com/houseofluthiery/"}, "Ben Kahler": {"website": "https://tikatooguitars.com/", "instagram": "https://www.instagram.com/tikatooguitars/"}, "John McVey": {"website": "https://www.johnmcvey.com/"}, "Martin Tremblay": {"website": "https://www.tremblayluthier.com/"}, "Mike Doolin": {"website": "http://doolinguitars.com/", "instagram": "https://www.instagram.com/doolinguitars/"}, "Michael Isabel": {"website": "https://sollohubmusic.com/michael-isabell/"}};
+const DATA = [
+  {
+    "date": "Friday, September 18",
+    "time": "3:00 PM",
+    "title": "Luthier Setup",
+    "venue": "Hilton Garden Inn \u2013 Lobby",
+    "type": "Setup",
+    "note": null,
+    "price": null,
+    "end_time": "4:30 PM",
+    "duration_label": "1 hr 30 min",
+    "performers": [],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "4:30 PM",
+    "title": "Luthiers, Artists & VVIP Welcome Reception \u2014 Taylor Roberts & Nate Lopez",
+    "venue": "Hilton Garden Inn \u2013 Lobby",
+    "type": "Reception",
+    "note": null,
+    "price": null,
+    "end_time": "5:30 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Taylor Roberts",
+      "Nate Lopez"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "5:30 PM",
+    "title": "Elden Kelly \u2014 The Blue Guitars",
+    "venue": "Hilton Garden Inn \u2013 Lobby",
+    "type": "Performance",
+    "note": "Part of The Archtop Foundation Presents: The Blue Guitars",
+    "price": null,
+    "end_time": "6:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Elden Kelly"
+    ],
+    "luthier": "The Blue Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "6:00 PM",
+    "title": "Sean McGowan & Grant Gordy \u2014 The Blue Guitars",
+    "venue": "Hilton Garden Inn \u2013 Lobby",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "7:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Sean McGowan",
+      "Grant Gordy"
+    ],
+    "luthier": "The Blue Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "6:30 PM",
+    "title": "Steve Kovalcheck",
+    "venue": "Olde Town Social",
+    "type": "Performance",
+    "note": "Organ Trio Madness \u2014 hosted by Steve Kovalcheck, featuring Tom Amend (B3 organ) & Brian Claxton (drums)",
+    "price": null,
+    "end_time": "7:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Steve Kovalcheck",
+      "Tom Amend",
+      "Brian Claxton"
+    ],
+    "luthier": null,
+    "address": "5610 Yukon St, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "7:00 PM",
+    "title": "John Storie & Perry Smith \u2014 The Blue Guitars",
+    "venue": "Hilton Garden Inn \u2013 Lobby",
+    "type": "Performance",
+    "note": "Introduction by Pat Kelley",
+    "price": null,
+    "end_time": "8:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "John Storie",
+      "Perry Smith"
+    ],
+    "luthier": "The Blue Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "7:00 PM",
+    "title": "Mason Razavi",
+    "venue": "Olde Town Social",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "7:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Mason Razavi",
+      "Tom Amend",
+      "Brian Claxton"
+    ],
+    "luthier": null,
+    "address": "5610 Yukon St, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "7:00 PM",
+    "title": "David Blake",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Performance",
+    "note": "House band: Todd Reid (drums) & Drew Morell (bass)",
+    "price": null,
+    "end_time": "7:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "David Blake",
+      "Todd Reid",
+      "Drew Morell"
+    ],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "7:30 PM",
+    "title": "Paul Asbell",
+    "venue": "Olde Town Social",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "8:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Paul Asbell",
+      "Tom Amend",
+      "Brian Claxton"
+    ],
+    "luthier": null,
+    "address": "5610 Yukon St, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "7:30 PM",
+    "title": "Rich Severson",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "8:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Rich Severson",
+      "Todd Reid",
+      "Drew Morell"
+    ],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "8:00 PM",
+    "title": "Beth Marlis",
+    "venue": "Olde Town Social",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "8:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Beth Marlis",
+      "Tom Amend",
+      "Brian Claxton"
+    ],
+    "luthier": null,
+    "address": "5610 Yukon St, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "8:00 PM",
+    "title": "BREAK",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Break",
+    "note": null,
+    "price": null,
+    "end_time": "8:30 PM",
+    "duration_label": "30 min",
+    "performers": [],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "8:00 PM",
+    "title": "Frank Vignola Trio feat. Pasquale Grasso & Vinny Raniolo",
+    "venue": "Olde Town Pickin Parlor",
+    "type": "Performance",
+    "note": null,
+    "price": "$40 \u2014 SOLD OUT",
+    "end_time": "9:30 PM",
+    "duration_label": "1 hr 30 min",
+    "performers": [
+      "Frank Vignola",
+      "Pasquale Grasso",
+      "Vinny Raniolo"
+    ],
+    "luthier": null,
+    "address": "7515 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "8:00 PM",
+    "title": "Rocky Mountain Swing Camp \u2014 Lisa Liu, Greg Ruby & Michael Isabel, featuring Howard Alden",
+    "venue": "Silver Vines Winery",
+    "type": "Workshop / Camp",
+    "note": null,
+    "price": null,
+    "end_time": "10:00 PM",
+    "duration_label": "2 hrs",
+    "performers": [
+      "Lisa Liu",
+      "Greg Ruby",
+      "Michael Isabel",
+      "Howard Alden"
+    ],
+    "luthier": null,
+    "address": "7509 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "8:30 PM",
+    "title": "BREAK",
+    "venue": "Olde Town Social",
+    "type": "Break",
+    "note": null,
+    "price": null,
+    "end_time": "9:00 PM",
+    "duration_label": "30 min",
+    "performers": [],
+    "luthier": null,
+    "address": "5610 Yukon St, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "8:30 PM",
+    "title": "Pat Kelley",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "9:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Pat Kelley",
+      "Todd Reid",
+      "Drew Morell"
+    ],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "9:00 PM",
+    "title": "Perry Smith",
+    "venue": "Olde Town Social",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "9:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Perry Smith",
+      "Tom Amend",
+      "Brian Claxton"
+    ],
+    "luthier": null,
+    "address": "5610 Yukon St, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "9:00 PM",
+    "title": "Davy Mooney",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "9:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Davy Mooney",
+      "Todd Reid",
+      "Drew Morell"
+    ],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "9:30 PM",
+    "title": "Brad Rabuchin",
+    "venue": "Olde Town Social",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "10:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Brad Rabuchin",
+      "Tom Amend",
+      "Brian Claxton"
+    ],
+    "luthier": null,
+    "address": "5610 Yukon St, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "9:30 PM",
+    "title": "BREAK",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Break",
+    "note": null,
+    "price": null,
+    "end_time": "10:00 PM",
+    "duration_label": "30 min",
+    "performers": [],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "10:00 PM",
+    "title": "Fareed Haque",
+    "venue": "Olde Town Social",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "10:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Fareed Haque",
+      "Tom Amend",
+      "Brian Claxton"
+    ],
+    "luthier": null,
+    "address": "5610 Yukon St, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "10:00 PM",
+    "title": "Ulf Wakenius",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "10:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Ulf Wakenius",
+      "Todd Reid",
+      "Drew Morell"
+    ],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "10:30 PM",
+    "title": "Ricardo Grilli",
+    "venue": "Olde Town Social",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "11:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Ricardo Grilli",
+      "Tom Amend",
+      "Brian Claxton"
+    ],
+    "luthier": null,
+    "address": "5610 Yukon St, Arvada, CO"
+  },
+  {
+    "date": "Friday, September 18",
+    "time": "10:30 PM",
+    "title": "Barry Greene",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "11:00 PM",
+    "duration_label": "~30 min",
+    "performers": [
+      "Barry Greene",
+      "Todd Reid",
+      "Drew Morell"
+    ],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "8:30 AM",
+    "title": "Tom Ribbecke \u2014 Compliant Rim Guitars",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "9:30 AM",
+    "duration_label": "1 hr",
+    "performers": [],
+    "luthier": "Ribbecke Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "9:30 AM",
+    "title": "Frank Vignola",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "10:30 AM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Frank Vignola"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "10:00 AM",
+    "title": "Luthier Exhibition",
+    "venue": "Hilton Garden Inn \u2013 Wadsworth Ballroom",
+    "type": "Exhibition",
+    "note": null,
+    "price": null,
+    "end_time": "5:00 PM",
+    "duration_label": "7 hrs",
+    "performers": [],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "10:00 AM",
+    "title": "Tremblay Guitars \u2014 Martin Tremblay",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "10:30 AM",
+    "duration_label": "30 min",
+    "performers": [
+      "Martin Tremblay"
+    ],
+    "luthier": "Martin Tremblay Luthier",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "10:00 AM",
+    "title": "Rich Severson",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "11:00 AM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Rich Severson"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "10:30 AM",
+    "title": "Bayard Guitars \u2014 Tim Ferrell",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "11:00 AM",
+    "duration_label": "30 min",
+    "performers": [
+      "Tim Ferrell"
+    ],
+    "luthier": "Bayard Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "10:30 AM",
+    "title": "Pasquale Grasso",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "11:30 AM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Pasquale Grasso"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "11:00 AM",
+    "title": "Beno\u00eet Lavoie Luthier \u2014 TBD",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "11:30 AM",
+    "duration_label": "30 min",
+    "performers": [],
+    "luthier": "Beno\u00eet Lavoie Luthier",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "11:00 AM",
+    "title": "Tim Ferrell",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "12:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Tim Ferrell"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "11:30 AM",
+    "title": "Mirabella Guitars \u2014 Perry Smith",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "12:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Perry Smith"
+    ],
+    "luthier": "Mirabella Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "11:30 AM",
+    "title": "Tom Nania \u2014 Archtop Guitar Dynamics",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": "An in-depth study into the physics of the archtop guitar",
+    "price": null,
+    "end_time": "12:30 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Tom Nania"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "12:00 PM",
+    "title": "Linda Manzer Guitars \u2014 Ted Ludwig",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "12:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Ted Ludwig"
+    ],
+    "luthier": "Manzer Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "12:00 PM",
+    "title": "Perry Smith",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "1:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Perry Smith"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "12:00 PM",
+    "title": "Alan Kwan",
+    "venue": "Method and Muse Distillery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "1:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Alan Kwan"
+    ],
+    "luthier": null,
+    "address": "7513 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "12:30 PM",
+    "title": "Majestyk Guitars \u2014 Ted Ludwig & Steve Kovalcheck",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "1:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Ted Ludwig",
+      "Steve Kovalcheck"
+    ],
+    "luthier": "Majestyk Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "12:30 PM",
+    "title": "Paul Ricci",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "1:30 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Paul Ricci"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "1:00 PM",
+    "title": "Brown Guitars \u2014 Sean McGowan & Donovan Raitt",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "1:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Sean McGowan",
+      "Donovan Raitt"
+    ],
+    "luthier": "Brown Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "1:00 PM",
+    "title": "Ted Ludwig",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "2:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Ted Ludwig"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "1:00 PM",
+    "title": "Ricardo Grilli",
+    "venue": "Method and Muse Distillery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "2:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Ricardo Grilli"
+    ],
+    "luthier": null,
+    "address": "7513 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "1:30 PM",
+    "title": "Combs Instruments \u2014 Jonathan Stout",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "2:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Jonathan Stout"
+    ],
+    "luthier": "Combs Instruments",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "1:30 PM",
+    "title": "Sean McGowan \u2014 The Holistic Guitarist",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": "Healthy stretching, practicing habits & overall wellness for guitarists",
+    "price": null,
+    "end_time": "2:30 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Sean McGowan"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "2:00 PM",
+    "title": "Brad Corney Guitars \u2014 TBD",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "2:30 PM",
+    "duration_label": "30 min",
+    "performers": [],
+    "luthier": "Brad Corney Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "2:00 PM",
+    "title": "Wayne Goins",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "3:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Wayne Goins"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "2:00 PM",
+    "title": "Pat Kelley w/ John Storie (maybe Perry Smith)",
+    "venue": "Method and Muse Distillery",
+    "type": "Performance",
+    "note": "If his flight hasn't left yet",
+    "price": null,
+    "end_time": "3:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Pat Kelley",
+      "John Storie",
+      "Perry Smith"
+    ],
+    "luthier": null,
+    "address": "7513 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "2:30 PM",
+    "title": "D'Arcy Guitars \u2014 David Blake",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "3:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "David Blake"
+    ],
+    "luthier": "D'Arcy Blake (D'Arcy Guitars)",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "2:30 PM",
+    "title": "Ulf Wakenius",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "3:30 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Ulf Wakenius"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "3:00 PM",
+    "title": "Doolin Guitars \u2014 Mike Doolin",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "3:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Mike Doolin"
+    ],
+    "luthier": "Doolin Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "3:00 PM",
+    "title": "Paul Asbell",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "4:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Paul Asbell"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "3:00 PM",
+    "title": "Shawn Purcell w/ Wayne Wilkinson",
+    "venue": "Method and Muse Distillery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "4:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Shawn Purcell",
+      "Wayne Wilkinson"
+    ],
+    "luthier": null,
+    "address": "7513 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "3:30 PM",
+    "title": "Comins Guitars \u2014 Ted Ludwig",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "4:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Ted Ludwig"
+    ],
+    "luthier": "Comins Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "3:30 PM",
+    "title": "Fareed Haque",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "5:00 PM",
+    "duration_label": "1 hr 30 min",
+    "performers": [
+      "Fareed Haque"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "4:00 PM",
+    "title": "Hikaru Customs \u2014 TBD",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "4:30 PM",
+    "duration_label": "30 min",
+    "performers": [],
+    "luthier": "Hikaru Customs",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "4:00 PM",
+    "title": "Barry Greene",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "5:00 PM",
+    "duration_label": "~1 hr",
+    "performers": [
+      "Barry Greene"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "4:00 PM",
+    "title": "Taylor Roberts",
+    "venue": "Method and Muse Distillery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "5:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Taylor Roberts"
+    ],
+    "luthier": null,
+    "address": "7513 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "4:00 PM",
+    "title": "Tommy Benson",
+    "venue": "Silver Vines Winery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "5:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Tommy Benson"
+    ],
+    "luthier": null,
+    "address": "7509 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "4:30 PM",
+    "title": "LHT Guitars \u2014 Sean McGowan",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "5:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Sean McGowan"
+    ],
+    "luthier": "LHT Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "5:00 PM",
+    "title": "Benedetto Guitars \u2014 Wayne Goins & Wayne Wilkinson",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "5:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Wayne Goins",
+      "Wayne Wilkinson"
+    ],
+    "luthier": "Benedetto Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "5:00 PM",
+    "title": "David Becker Performs: PLANETS",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Performance",
+    "note": "Projections of the cosmos merged with masterfully composed & improvised melodies",
+    "price": null,
+    "end_time": "6:30 PM",
+    "duration_label": "~1 hr 30 min",
+    "performers": [
+      "David Becker"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "5:00 PM",
+    "title": "Rich Severson",
+    "venue": "Method and Muse Distillery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "6:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Rich Severson"
+    ],
+    "luthier": null,
+    "address": "7513 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "5:00 PM",
+    "title": "Mark Kleinhaut & Nate Lopez",
+    "venue": "Silver Vines Winery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "6:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Mark Kleinhaut",
+      "Nate Lopez"
+    ],
+    "luthier": null,
+    "address": "7509 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "5:30 PM",
+    "title": "Joint Forces Guitar Quartet",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Performance",
+    "note": "Ben Turner, Geoff Reecer, Alan Prather & Jan Knutsen",
+    "price": null,
+    "end_time": "8:00 PM",
+    "duration_label": "2 hr 30 min",
+    "performers": [
+      "Ben Turner",
+      "Geoff Reecer",
+      "Alan Prather",
+      "Jan Knutsen"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "6:00 PM",
+    "title": "Beth Marlis, Jocelyn Gould & Lisa Liu",
+    "venue": "Method and Muse Distillery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "7:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Beth Marlis",
+      "Jocelyn Gould",
+      "Lisa Liu"
+    ],
+    "luthier": null,
+    "address": "7513 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "6:00 PM",
+    "title": "Donovan Raitt & Tim Lerch (Bram Guitars)",
+    "venue": "Silver Vines Winery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "7:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Donovan Raitt",
+      "Tim Lerch"
+    ],
+    "luthier": "Tim Bram Guitars",
+    "address": "7509 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "7:00 PM",
+    "title": "Brad Rabuchin & David Becker",
+    "venue": "Method and Muse Distillery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "8:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Brad Rabuchin",
+      "David Becker"
+    ],
+    "luthier": null,
+    "address": "7513 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "7:00 PM",
+    "title": "Tim Lerch (Wald Guitars)",
+    "venue": "Silver Vines Winery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "8:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Tim Lerch"
+    ],
+    "luthier": "Wald Guitars",
+    "address": "7509 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "7:00 PM",
+    "title": "Bruce Forman's Red Guitar",
+    "venue": "Olde Town Pickin Parlor",
+    "type": "Performance",
+    "note": null,
+    "price": "$40",
+    "end_time": "7:30 PM",
+    "duration_label": "~30 min",
+    "performers": [
+      "Bruce Forman"
+    ],
+    "luthier": null,
+    "address": "7515 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "7:00 PM",
+    "title": "Jonathan Stout",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "8:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Jonathan Stout"
+    ],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "8:00 PM",
+    "title": "Benedetto All-Stars!",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Performance",
+    "note": "Ron Bland (bass) & Todd Reid (drums) backing Barry Greene, Beth Marlis, Davy Mooney, Howard Alden, Jackson Evans, Jocelyn Gould, Pat Kelley, Shawn Purcell, Taylor Roberts, Ulf Wakenius, Wayne Goins & Wayne Wilkinson",
+    "price": null,
+    "end_time": "10:30 PM",
+    "duration_label": "~2 hr 30 min",
+    "performers": [
+      "Ron Bland",
+      "Todd Reid",
+      "Barry Greene",
+      "Beth Marlis",
+      "Davy Mooney",
+      "Howard Alden",
+      "Jackson Evans",
+      "Jocelyn Gould",
+      "Pat Kelley",
+      "Shawn Purcell",
+      "Taylor Roberts",
+      "Ulf Wakenius",
+      "Wayne Goins",
+      "Wayne Wilkinson"
+    ],
+    "luthier": "Benedetto Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "8:00 PM",
+    "title": "Paul Ricci",
+    "venue": "Method and Muse Distillery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "9:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Paul Ricci"
+    ],
+    "luthier": null,
+    "address": "7513 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "8:00 PM",
+    "title": "Rocky Mountain Swing Camp \u2014 Lisa Liu, Greg Ruby & Michael Isabel, featuring Jonathan Stout",
+    "venue": "Silver Vines Winery",
+    "type": "Workshop / Camp",
+    "note": null,
+    "price": null,
+    "end_time": "10:00 PM",
+    "duration_label": "2 hrs",
+    "performers": [
+      "Lisa Liu",
+      "Greg Ruby",
+      "Michael Isabel",
+      "Jonathan Stout"
+    ],
+    "luthier": null,
+    "address": "7509 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "8:00 PM",
+    "title": "Mason Razavi",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "9:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Mason Razavi"
+    ],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "9:00 PM",
+    "title": "Ted Ludwig & Friends",
+    "venue": "Method and Muse Distillery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": null,
+    "duration_label": "Until close",
+    "performers": [
+      "Ted Ludwig"
+    ],
+    "luthier": null,
+    "address": "7513 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Saturday, September 19",
+    "time": "9:00 PM",
+    "title": "Sean McGowan & Grant Gordy",
+    "venue": "Arvada Tavern Speakeasy Tiki",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "10:00 PM",
+    "duration_label": "~1 hr",
+    "performers": [
+      "Sean McGowan",
+      "Grant Gordy"
+    ],
+    "luthier": null,
+    "address": "5707 Olde Wadsworth Blvd, Arvada, CO \u2014 Tiki Speakeasy"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "9:30 AM",
+    "title": "PANEL: Mic'ing Techniques for Archtop Guitars \u2014 John McVey & Mark Kleinhaut",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "10:30 AM",
+    "duration_label": "1 hr",
+    "performers": [
+      "John McVey",
+      "Mark Kleinhaut"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "10:00 AM",
+    "title": "Luthier Exhibition",
+    "venue": "Hilton Garden Inn \u2013 Wadsworth Ballroom",
+    "type": "Exhibition",
+    "note": null,
+    "price": null,
+    "end_time": "3:00 PM",
+    "duration_label": "5 hrs",
+    "performers": [],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "10:00 AM",
+    "title": "Marchoine Guitars \u2014 John Storie",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "10:30 AM",
+    "duration_label": "30 min",
+    "performers": [
+      "John Storie"
+    ],
+    "luthier": "Marchione Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "10:00 AM",
+    "title": "David Becker",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "11:00 AM",
+    "duration_label": "1 hr",
+    "performers": [
+      "David Becker"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "10:30 AM",
+    "title": "D'Ambrosio Guitars \u2014 Ricardo Grilli & Ted Ludwig",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "11:00 AM",
+    "duration_label": "30 min",
+    "performers": [
+      "Ricardo Grilli",
+      "Ted Ludwig"
+    ],
+    "luthier": "D'Ambrosio Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "10:30 AM",
+    "title": "Jocelyn Gould",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "11:30 AM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Jocelyn Gould"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "11:00 AM",
+    "title": "Odashima Guitars \u2014 TBD",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "11:30 AM",
+    "duration_label": "30 min",
+    "performers": [],
+    "luthier": "Odashima Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "11:00 AM",
+    "title": "John Storie",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "12:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "John Storie"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "11:30 AM",
+    "title": "Rob Goldberg Handmade Guitars \u2014 Wayne Tollefsen",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "12:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Wayne Tollefsen"
+    ],
+    "luthier": "Rob Goldberg Handmade Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "11:30 AM",
+    "title": "Beth Marlis \u2014 Jimmy Wyble's Musical Legacy",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "12:30 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Beth Marlis"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "12:00 PM",
+    "title": "Rose-Zadow Instruments \u2014 TBD",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "12:30 PM",
+    "duration_label": "30 min",
+    "performers": [],
+    "luthier": "Rose-Zadow Instruments",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "12:00 PM",
+    "title": "Davy Mooney",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "1:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Davy Mooney"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "12:30 PM",
+    "title": "Sonntag Guitars \u2014 Bruce Forman",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "1:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Bruce Forman"
+    ],
+    "luthier": "Sonntag Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "12:30 PM",
+    "title": "Jonathan Stout \u2014 Chord Melody",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "1:30 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Jonathan Stout"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "1:00 PM",
+    "title": "Tikatoo Guitars \u2014 Ben Kahler",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "1:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Ben Kahler"
+    ],
+    "luthier": "Tikatoo Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "1:00 PM",
+    "title": "Tim Lerch",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "2:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Tim Lerch"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "1:00 PM",
+    "title": "Tim Farrell",
+    "venue": "Silver Vines Winery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "2:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Tim Farrell"
+    ],
+    "luthier": null,
+    "address": "7509 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "1:30 PM",
+    "title": "Tim Bram Guitars \u2014 Tim Lerch & Donovan Raitt",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "2:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Tim Lerch",
+      "Donovan Raitt"
+    ],
+    "luthier": "Tim Bram Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "1:30 PM",
+    "title": "Bruce Forman",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "2:30 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Bruce Forman"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "2:00 PM",
+    "title": "Tim Frick Guitars \u2014 Mason Razavi",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "2:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Mason Razavi"
+    ],
+    "luthier": "Tim Frick Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "2:00 PM",
+    "title": "Shawn Purcell",
+    "venue": "Hilton Garden Inn \u2013 Room 119",
+    "type": "Workshop",
+    "note": null,
+    "price": null,
+    "end_time": "3:00 PM",
+    "duration_label": "~1 hr",
+    "performers": [
+      "Shawn Purcell"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "2:00 PM",
+    "title": "Howard Alden & Greg Ruby",
+    "venue": "Silver Vines Winery",
+    "type": "Performance",
+    "note": null,
+    "price": null,
+    "end_time": "3:00 PM",
+    "duration_label": "~1 hr",
+    "performers": [
+      "Howard Alden",
+      "Greg Ruby"
+    ],
+    "luthier": null,
+    "address": "7509 Grandview Ave, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "2:30 PM",
+    "title": "Wald Guitars \u2014 Tim Lerch",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "3:00 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Tim Lerch"
+    ],
+    "luthier": "Wald Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "2:30 PM",
+    "title": "Howard Alden",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Workshop / Presentation",
+    "note": null,
+    "price": null,
+    "end_time": "3:30 PM",
+    "duration_label": "~1 hr",
+    "performers": [
+      "Howard Alden"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "3:00 PM",
+    "title": "Ribbecke Guitars \u2014 Mark Kleinhaut & Paul Asbell",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "3:30 PM",
+    "duration_label": "30 min",
+    "performers": [
+      "Mark Kleinhaut",
+      "Paul Asbell"
+    ],
+    "luthier": "Ribbecke Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "3:30 PM",
+    "title": "German Guitars \u2014 TBD",
+    "venue": "Hilton Garden Inn \u2013 Lobby Stage",
+    "type": "Luthier Showcase",
+    "note": null,
+    "price": null,
+    "end_time": "4:00 PM",
+    "duration_label": "~30 min",
+    "performers": [],
+    "luthier": "German Guitars",
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "6:00 PM",
+    "title": "Wolfgang Muthspiel",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Performance",
+    "note": "Main Event",
+    "price": "$40",
+    "end_time": "7:00 PM",
+    "duration_label": "1 hr",
+    "performers": [
+      "Wolfgang Muthspiel"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  },
+  {
+    "date": "Sunday, September 20",
+    "time": "7:00 PM",
+    "title": "The TransAtlantic Guitar Trio \u2014 Richard Smith, Joscho Stefan & Rory Hoffman",
+    "venue": "Hilton Garden Inn \u2013 Swadley Ballroom",
+    "type": "Performance",
+    "note": "Main Event",
+    "price": "$40",
+    "end_time": "8:00 PM",
+    "duration_label": "~1 hr",
+    "performers": [
+      "Richard Smith",
+      "Joscho Stefan",
+      "Rory Hoffman"
+    ],
+    "luthier": null,
+    "address": "5545 Olde Wadsworth Blvd, Arvada, CO"
+  }
+];
+const LUTHIERS = [
+  {
+    "name": "Benedetto Guitars",
+    "location": "Savannah, GA",
+    "url": "https://www.benedettoguitars.com/",
+    "bio": "Founded in 1968 by luthier Robert Benedetto, celebrating over 50 years of jazz guitar excellence, building some of the world's most collectible archtops.",
+    "instagram": "https://www.instagram.com/benedetto_guitars/"
+  },
+  {
+    "name": "Maegen Wells Guitars and Mandolins",
+    "location": "Forestville, CA",
+    "url": "http://www.maegenwellsguitars.com/",
+    "bio": "Handcrafted guitars and mandolins built one at a time on a busy bench full of sawdust, tools, and glue.",
+    "instagram": "https://www.instagram.com/maegenwellsguitars/"
+  },
+  {
+    "name": "LHT Guitars",
+    "location": "Healdsburg, CA",
+    "url": "https://www.lhtguitars.com/",
+    "bio": "Each guitar built from start to finish by hand, from a hand-drawn full-scale blueprint through to the final finish.",
+    "instagram": "https://www.instagram.com/lhtguitars/"
+  },
+  {
+    "name": "Beauregard Guitars",
+    "location": "Montreal, Canada",
+    "url": "http://beauregardguitars.com/",
+    "bio": "Montreal-based lutherie shop building archtop and gypsy-jazz guitars.",
+    "instagram": "https://www.instagram.com/beauregardguitars/"
+  },
+  {
+    "name": "Martin Tremblay Luthier",
+    "location": "Montreal, Canada",
+    "url": "https://www.tremblayluthier.com/",
+    "bio": "Renowned for archtop and gypsy jazz guitars since 2002, with instruments played by Bireli Lagrene and Denis Chang; mentored by Mario Beauregard and Ken Parker.",
+    "instagram": "https://www.instagram.com/tremblay_luthier/"
+  },
+  {
+    "name": "D'Ambrosio Guitars",
+    "location": "Los Angeles, CA",
+    "url": "https://www.dambrosioguitars.com/",
+    "bio": "One-of-a-kind archtops built for discerning artists, dealers, and patrons using curated, aged tonewoods.",
+    "instagram": "https://www.instagram.com/ottodambrosio/"
+  },
+  {
+    "name": "Brown Guitars",
+    "location": "Los Angeles, CA",
+    "url": "https://brown.guitars/",
+    "bio": "Tad Brown has handcrafted guitars since 1996, known in Southern California for fine setup and fretwork, and for exceptional acoustic responsiveness.",
+    "instagram": "https://www.instagram.com/brown_guitars/"
+  },
+  {
+    "name": "German Guitars",
+    "location": "Broomfield, CO",
+    "url": "http://germanguitars.com/",
+    "bio": "One-man shop treating each guitar as a living, functional sculpture rather than a factory product."
+  },
+  {
+    "name": "Tim Frick Guitars",
+    "location": "San Francisco, CA",
+    "url": "https://timfrickguitars.com/",
+    "bio": "Built his first archtop after taking Tom Ribbecke's class in 1995; has since worked with Gary Brawer and Frank Ford before focusing on archtop repair and building.",
+    "instagram": "https://www.instagram.com/timfrickguitars/"
+  },
+  {
+    "name": "Sonntag Guitars",
+    "location": "Augsburg, Germany",
+    "url": "https://sonntag-guitars.com/",
+    "bio": "Hand-crafts archtop jazz guitars exclusively, using no prefabricated parts and wood air-dried for at least five years.",
+    "instagram": "https://www.instagram.com/sonntaggitarrenbau/"
+  },
+  {
+    "name": "D'Arcy Blake (D'Arcy Guitars)",
+    "location": "Brooklyn, NY",
+    "url": "https://www.darcyguitars.com/",
+    "bio": "Founded in 2020 after a career shift from art history; the flagship Figure Zero was designed with twin brother, jazz guitarist David Blake.",
+    "instagram": "https://www.instagram.com/darcy.guitars/"
+  },
+  {
+    "name": "Marchione Guitars",
+    "location": "Houston, TX",
+    "url": "https://marchione.com/",
+    "bio": "Stephen Marchione began building in 1990, trained under John Suhr, and opened his first New York shop in 1993 before returning to his hometown of Houston in 2001.",
+    "instagram": "https://www.instagram.com/marchioneguitars/"
+  },
+  {
+    "name": "Manzer Guitars",
+    "location": "Toronto, Canada",
+    "url": "https://manzer.com/",
+    "bio": "Linda Manzer has been building guitars since 1974.",
+    "instagram": "https://www.instagram.com/manzerguitars/"
+  },
+  {
+    "name": "Beno\u00eet Lavoie Luthier",
+    "location": "Qu\u00e9bec, Canada",
+    "url": "https://www.benoitlavoie.com/",
+    "bio": "Instrument making at the convergence of art and science.",
+    "instagram": "https://www.instagram.com/benoitlavoieluthier/"
+  },
+  {
+    "name": "Brad Corney Guitars",
+    "location": "Santa Rosa, CA",
+    "url": "https://www.bradcorneyguitars.com/",
+    "bio": "Acoustic archtops inspired by the 1920s and '30s, built with old-world glues, finishes, and craftsmanship.",
+    "instagram": "https://www.instagram.com/bradcorneyguitars/"
+  },
+  {
+    "name": "Mirabella Guitars",
+    "location": "Saint James, NY",
+    "url": "https://www.mirabellaguitars.com/",
+    "bio": "Cristian Mirabella, with over 40 years of experience, is a premier archtop builder and top restorer of vintage D'Angelico, D'Aquisto, and golden-era Gibson instruments.",
+    "instagram": "https://www.instagram.com/mirabellaguitars/"
+  },
+  {
+    "name": "Scharpach Master Guitars",
+    "location": "Wellerlooi, Netherlands",
+    "url": "https://scharpach.com/",
+    "bio": "Theo Scharpach has led innovative archtop design for over 40 years, building for players including Steve Howe, Randy Bachman, and Al Di Meola.",
+    "instagram": "https://www.instagram.com/scharpachmasterguitar/"
+  },
+  {
+    "name": "Bayard Guitars",
+    "location": "",
+    "url": "https://www.bayardguitars.com/",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
+    "instagram": "https://www.instagram.com/bayard_guitars/"
+  },
+  {
+    "name": "Combs Instruments",
+    "location": "",
+    "url": "http://www.combsinstruments.com/",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
+    "instagram": "https://www.instagram.com/combsinstruments/"
+  },
+  {
+    "name": "Comins Guitars",
+    "location": "",
+    "url": "https://www.cominsguitars.com/",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
+    "instagram": "https://www.instagram.com/cominsguitars/"
+  },
+  {
+    "name": "Doolin Guitars",
+    "location": "",
+    "url": "http://doolinguitars.com/",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
+    "instagram": "https://www.instagram.com/doolinguitars/"
+  },
+  {
+    "name": "Hikaru Customs",
+    "location": "",
+    "url": "",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/."
+  },
+  {
+    "name": "Majestyk Guitars",
+    "location": "",
+    "url": "https://www.majestykguitars.com/",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
+    "instagram": "https://www.instagram.com/majestykguitarsfc/"
+  },
+  {
+    "name": "Odashima Guitars",
+    "location": "",
+    "url": "http://odashima-guitars.com/",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
+    "instagram": "https://www.instagram.com/odashimaguitars/"
+  },
+  {
+    "name": "Ribbecke Guitars",
+    "location": "",
+    "url": "http://www.rgcguitars.com/",
+    "bio": "Tom Ribbecke's archtop and Halfling-design guitars, handbuilt in Northern California since the early 1970s; Ribbecke Guitar Corporation (RGC) produces a more affordable production line under his supervision."
+  },
+  {
+    "name": "Rob Goldberg Handmade Guitars",
+    "location": "",
+    "url": "https://www.robgoldberghandmadeguitars.com/",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/."
+  },
+  {
+    "name": "Rose-Zadow Instruments",
+    "location": "",
+    "url": "",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
+    "instagram": "https://www.instagram.com/malcolmrosezadow/"
+  },
+  {
+    "name": "Tikatoo Guitars",
+    "location": "",
+    "url": "https://tikatooguitars.com/",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
+    "instagram": "https://www.instagram.com/tikatooguitars/"
+  },
+  {
+    "name": "Tim Bram Guitars",
+    "location": "",
+    "url": "https://www.timbramguitars.com/",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
+    "instagram": "https://www.instagram.com/timbramguitars/"
+  },
+  {
+    "name": "Wald Guitars",
+    "location": "",
+    "url": "https://waldguitars.com/",
+    "bio": "Showcasing at the 2026 festival \u2014 no exhibitor profile listed on archtopfestival.com/luthiers/.",
+    "instagram": "https://www.instagram.com/waldguitars/"
+  },
+  {
+    "name": "The Blue Guitars",
+    "location": "Burlington, VT (The Archtop Foundation)",
+    "url": "https://theblueguitars.com/",
+    "bio": "A collection of 22 blue-finished archtop guitars commissioned in the 1990s by collector Scott Chinery, each built by a different master luthier to the same specs as a tribute to Jimmy D'Aquisto. Now owned and toured by the nonprofit Archtop Foundation.",
+    "instagram": "https://www.instagram.com/theblueguitars/"
+  },
+  {
+    "name": "Wilkie Stringed Instruments",
+    "location": "Comox Valley, Vancouver Island, BC, Canada",
+    "url": "https://wilkiestringedinstruments.com/",
+    "bio": "Wyatt Wilkie hand-carves archtop guitars and mandolins, including the flagship Northern Flyer mandolin; self-taught, he later apprenticed with archtop icon Bob Benedetto.",
+    "instagram": "https://www.instagram.com/wyatt_wilkie/"
+  },
+  {
+    "name": "Zimnicki Guitars",
+    "location": "Allen Park, MI",
+    "url": "https://zimnicki.com/",
+    "bio": "Gary Zimnicki has hand-built custom guitars and mandolins since 1980, working flexibly with each customer to design instruments matched to their needs and tastes.",
+    "youtube": "https://www.youtube.com/channel/UCcmZZbmKxnRn5bKRoN3gNyw"
+  }
+];
+const PERFORMER_LINKS = {
+  "Alan Kwan": {
+    "instagram": "https://www.instagram.com/alankwanmusic/",
+    "website": "https://alankwanmusic.com/",
+    "youtube": "https://www.youtube.com/@AlanKwanMusic"
+  },
+  "Barry Greene": {
+    "instagram": "https://www.instagram.com/barrygreenevideolessons/",
+    "spotify": "https://open.spotify.com/artist/53XUhgFyb3LmUooPa57ypy",
+    "website": "https://www.barrygreene.com/",
+    "youtube": "http://www.youtube.com/channel/UCfVg7rHUKC7xq36RF0Btjfw"
+  },
+  "Ben Kahler": {
+    "instagram": "https://www.instagram.com/tikatooguitars/",
+    "website": "https://tikatooguitars.com/"
+  },
+  "Beth Marlis": {
+    "instagram": "https://www.instagram.com/bethmarlis/",
+    "website": "https://www.bethmarlis.com/",
+    "youtube": "https://www.youtube.com/@bethmarlis"
+  },
+  "Brad Rabuchin": {
+    "instagram": "https://www.instagram.com/rabuchinbrad/",
+    "website": "https://bradrabuchin.net/",
+    "youtube": "https://www.youtube.com/c/BradRabuchin"
+  },
+  "Bruce Forman": {
+    "instagram": "https://www.instagram.com/formanism/",
+    "spotify": "https://open.spotify.com/artist/63mL01Tg35HOMl19uzA7kL",
+    "website": "https://www.bruceforman.com/",
+    "youtube": "https://www.youtube.com/c/BruceFormanGrumps"
+  },
+  "David Becker": {
+    "instagram": "https://www.instagram.com/dabetrib/",
+    "spotify": "https://open.spotify.com/artist/0AkOcG92q7RjZgQuXX8pKe",
+    "website": "https://davidbeckertribune.com/",
+    "youtube": "https://www.youtube.com/channel/UCQCR0JSL_wT_a8BdmP6zfUQ"
+  },
+  "David Blake": {
+    "instagram": "https://www.instagram.com/davidblakeguitar/",
+    "spotify": "https://open.spotify.com/artist/6c51V0ogHEnhSzporI7J2E",
+    "website": "https://www.davidblakemusic.com/",
+    "youtube": "https://www.youtube.com/@davidblakeguitar"
+  },
+  "Davy Mooney": {
+    "instagram": "https://www.instagram.com/davymooney/",
+    "spotify": "https://open.spotify.com/artist/4d73pkSAEvk4LdXH4DTyxq",
+    "website": "https://davymooney.bandcamp.com/",
+    "youtube": "https://www.youtube.com/@DavyMooneyMusic"
+  },
+  "Donovan Raitt": {
+    "instagram": "https://www.instagram.com/donovanraitt/",
+    "website": "http://www.donovanraitt.com/",
+    "youtube": "https://www.youtube.com/user/donovanraitt"
+  },
+  "Elden Kelly": {
+    "instagram": "https://www.instagram.com/eldenkellymusic/",
+    "spotify": "https://open.spotify.com/artist/4AMCIB22ZsWDtse3KnUmbL",
+    "website": "http://www.eldenkelly.com"
+  },
+  "Fareed Haque": {
+    "instagram": "https://www.instagram.com/fareedhaque/",
+    "spotify": "https://open.spotify.com/artist/71hW2OzJ7qdRzysgKktqyN",
+    "website": "https://fareed.com/",
+    "youtube": "https://www.youtube.com/user/fareedhaque"
+  },
+  "Frank Vignola": {
+    "instagram": "https://www.instagram.com/frankvignolaguitar/",
+    "spotify": "https://open.spotify.com/artist/0AJD75yBfnawqdsZ9lvIxw",
+    "website": "https://www.frankvignola.com/",
+    "youtube": "https://www.youtube.com/@FrankVignolaGuitar"
+  },
+  "Grant Gordy": {
+    "instagram": "https://www.instagram.com/grantgordy/",
+    "spotify": "https://open.spotify.com/artist/4PEBfkLb0yruw3ki661c9q",
+    "website": "https://www.grantgordy.com/"
+  },
+  "Greg Ruby": {
+    "instagram": "https://www.instagram.com/gregrubymusic/",
+    "website": "https://gregrubymusic.com/",
+    "youtube": "https://www.youtube.com/@GregRubyMusic"
+  },
+  "Howard Alden": {
+    "instagram": "https://www.instagram.com/howard.v.alden/",
+    "spotify": "https://open.spotify.com/artist/7sgBK9xjqtnAFTfm2SvWMR",
+    "website": "https://howardalden.com/",
+    "youtube": "https://www.youtube.com/user/halden7"
+  },
+  "Jocelyn Gould": {
+    "instagram": "https://www.instagram.com/jocelyngouldmusic/",
+    "spotify": "https://open.spotify.com/artist/0KOhfBkfEdH7cdjIgfQULJ",
+    "website": "https://www.jocelyngould.com/",
+    "youtube": "https://youtube.com/@jocelyngouldmusic"
+  },
+  "John McVey": {
+    "website": "https://www.johnmcvey.com/"
+  },
+  "John Storie": {
+    "instagram": "https://www.instagram.com/jazzstorie/",
+    "website": "http://www.johnstorie.com/",
+    "youtube": "https://www.youtube.com/user/jazzstorie"
+  },
+  "Jonathan Stout": {
+    "instagram": "https://www.instagram.com/campusfive/",
+    "spotify": "https://open.spotify.com/artist/63DfvceFDGep3KG2WqWN74",
+    "website": "https://www.campusfive.com/"
+  },
+  "Joscho Stefan": {
+    "instagram": "https://www.instagram.com/joschostephan/",
+    "spotify": "https://open.spotify.com/artist/03gMsWBnlCYwx7ivVnO0WG",
+    "website": "https://joscho-stephan.de/en",
+    "youtube": "https://www.youtube.com/@JoschoStephan"
+  },
+  "Lisa Liu": {
+    "instagram": "https://www.instagram.com/lisaliuguitar/",
+    "website": "https://lisaliuguitar.com/"
+  },
+  "Mark Kleinhaut": {
+    "website": "https://markkleinhaut.com/",
+    "youtube": "https://www.youtube.com/@markkleinhautjazzguitar333"
+  },
+  "Martin Tremblay": {
+    "website": "https://www.tremblayluthier.com/"
+  },
+  "Mason Razavi": {
+    "instagram": "https://www.instagram.com/masonrazavi/",
+    "spotify": "https://open.spotify.com/artist/5vMll89aIUku9x7qYZJHhF",
+    "website": "http://www.masonrazavi.com/",
+    "youtube": "https://www.youtube.com/user/masonrazavi"
+  },
+  "Michael Isabel": {
+    "website": "https://sollohubmusic.com/michael-isabell/"
+  },
+  "Mike Doolin": {
+    "instagram": "https://www.instagram.com/doolinguitars/",
+    "website": "http://doolinguitars.com/"
+  },
+  "Nate Lopez": {
+    "instagram": "https://www.instagram.com/natelopezmusic/",
+    "website": "https://natelopez.com/"
+  },
+  "Pasquale Grasso": {
+    "instagram": "https://www.instagram.com/pasqualegrassomusic/",
+    "spotify": "https://open.spotify.com/artist/7M6Meoc3uCzIyRP7V8HQQY",
+    "website": "https://www.pasqualegrasso.com/",
+    "youtube": "https://www.youtube.com/channel/UCSRa8zcwyNXHT82PUpju0lQ"
+  },
+  "Pat Kelley": {
+    "website": "https://patkelley.com"
+  },
+  "Paul Asbell": {
+    "website": "https://paulasbell.com/"
+  },
+  "Paul Ricci": {
+    "website": "https://mafaldaminnozzi.com/album/cool-romantics-en/"
+  },
+  "Perry Smith": {
+    "instagram": "https://www.instagram.com/perrysmithmusic/",
+    "spotify": "https://open.spotify.com/intl-de/artist/4Lf1IYYdNwIehVqkZCqACK",
+    "website": "https://perrysmithmusic.com/",
+    "youtube": "https://www.youtube.com/channel/UCpVisgvWUuDK2FiJqagQZkw"
+  },
+  "Ricardo Grilli": {
+    "instagram": "https://www.instagram.com/ricardogrilli/",
+    "spotify": "https://open.spotify.com/artist/30QYGxMSf3ftpWwdOr8XAb",
+    "website": "http://www.ricardogrilli.com"
+  },
+  "Rich Severson": {
+    "instagram": "https://www.instagram.com/richseversonjazz/",
+    "spotify": "https://open.spotify.com/artist/47m7d6d9Xr6Y4ie0NrcXwI",
+    "website": "https://www.guitarcollege.net/"
+  },
+  "Richard Smith": {
+    "instagram": "https://www.instagram.com/richardsmithmusic/",
+    "website": "https://richardsmithmusic.com/",
+    "youtube": "https://www.youtube.com/user/richardsmithmusic"
+  },
+  "Rory Hoffman": {
+    "website": "https://www.roryhoffman.com/"
+  },
+  "Sean McGowan": {
+    "instagram": "https://www.instagram.com/seanmcgowanguitar/",
+    "spotify": "https://open.spotify.com/artist/2Msw16MmR5pjJKrE2RlpGz",
+    "website": "https://seanmcgowanguitar.com/",
+    "youtube": "https://www.youtube.com/@seanmcgowanguitar"
+  },
+  "Shawn Purcell": {
+    "instagram": "https://www.instagram.com/shawnpurcell71/",
+    "spotify": "https://open.spotify.com/artist/7BlOdNF7c5Q2R8SqWF7Y4R",
+    "website": "https://www.shawnpurcell.com"
+  },
+  "Steve Kovalcheck": {
+    "instagram": "http://instagram.com/stevekovalcheck",
+    "website": "https://www.kovalcheckmusic.com/"
+  },
+  "Taylor Roberts": {
+    "instagram": "https://www.instagram.com/tr7guitar/",
+    "spotify": "https://open.spotify.com/artist/2dyIV7FcMYBSsBLhqCHtwN",
+    "website": "https://www.taylorrobertsguitarist.com"
+  },
+  "Ted Ludwig": {
+    "instagram": "https://www.instagram.com/tedludwigjazz/",
+    "spotify": "https://open.spotify.com/artist/0cyqWumlYCxrN2Olg5Do2D",
+    "website": "https://www.tedludwig.com/",
+    "youtube": "https://www.youtube.com/channel/UCHGOWPItlPdlpCWQvHZeQGw"
+  },
+  "Tim Farrell": {
+    "instagram": "https://www.instagram.com/timfarrellmusic/",
+    "spotify": "https://open.spotify.com/artist/2ZUazTgHPZia5PfuXsTtyu",
+    "website": "https://www.timfarrellmusic.com/"
+  },
+  "Tim Lerch": {
+    "instagram": "https://www.instagram.com/timlerch.guitarist/",
+    "website": "https://www.timlerch.com/",
+    "youtube": "https://www.youtube.com/@TimLerchGuitar"
+  },
+  "Tom Nania": {
+    "instagram": "https://www.instagram.com/houseofluthiery/",
+    "website": "https://archtopproject.org/"
+  },
+  "Ulf Wakenius": {
+    "instagram": "https://www.instagram.com/ulfwakeniusguitar/",
+    "spotify": "https://open.spotify.com/artist/15hIJXUw2c1byTN5dqeYaJ"
+  },
+  "Vinny Raniolo": {
+    "instagram": "https://www.instagram.com/vinnyraniolo/",
+    "website": "https://www.vinnyraniolo.com/"
+  },
+  "Wayne Goins": {
+    "spotify": "https://open.spotify.com/artist/316rAhHKjMLyoBjnYqrEda",
+    "website": "https://waynegoins.com/"
+  },
+  "Wayne Wilkinson": {
+    "instagram": "https://www.instagram.com/coguitarist/",
+    "website": "http://waynewilkinson.com/"
+  },
+  "Wolfgang Muthspiel": {
+    "instagram": "https://www.instagram.com/wolfgangmuthspiel/",
+    "spotify": "https://open.spotify.com/artist/7a7Vs88vzOcmHh4GOpUEJJ",
+    "website": "http://www.wolfgangmuthspiel.com"
+  }
+};
 
 function venueKey(v){
   if (v === "Hilton Garden Inn – Lobby" || v === "Hilton Garden Inn – Lobby Stage") return "Hilton Garden Inn – Lobby";
@@ -666,6 +2851,19 @@ const DAY_LABEL = {
 };
 
 const DAYS = ["Friday, September 18", "Saturday, September 19", "Sunday, September 20"];
+
+// If someone opens this during the actual festival, jump straight to today's
+// day tab instead of always defaulting to Friday — outside the festival
+// dates (or if the date can't be read), fall back to Friday as before.
+function todaysFestivalDay(){
+  const now = new Date();
+  const year = now.getFullYear();
+  const dayMs = 24 * 60 * 60 * 1000;
+  const start = new Date(year, 8, 18); // Sept 18 (month is 0-indexed)
+  const diff = Math.round((new Date(now.getFullYear(), now.getMonth(), now.getDate()) - start) / dayMs);
+  if (diff >= 0 && diff < DAYS.length) return DAYS[diff];
+  return DAYS[0];
+}
 const DAY_SHORT = {"Friday, September 18":"Fri","Saturday, September 19":"Sat","Sunday, September 20":"Sun"};
 
 function timeToMinutes(t){
@@ -675,8 +2873,18 @@ function timeToMinutes(t){
   return h*60 + parseInt(m[2],10);
 }
 
+// Chronological sort (festival day, then time-of-day) used anywhere a set of
+// appearances is listed — the Performer and Luthier views both need this.
+function sortByDayThenTime(items){
+  return items.slice().sort((a,b) => {
+    const da = DAYS.indexOf(a.date), db = DAYS.indexOf(b.date);
+    if (da !== db) return da - db;
+    return timeToMinutes(a.time) - timeToMinutes(b.time);
+  });
+}
+
 let sortMode = 'time';        // 'time' | 'venue' | 'performer' | 'luthiers'
-let activeDay = DAYS[0];
+let activeDay = todaysFestivalDay();
 let activeVenues = new Set(); // empty = show all (Time/Venue modes)
 let performerQuery = '';
 
@@ -692,17 +2900,36 @@ function chevronSVG(){
 const IG_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>';
 const SPOTIFY_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M6.8 9.8c3.2-.9 7.3-.6 9.9 1" stroke-linecap="round"/><path d="M7.3 12.7c2.7-.7 5.9-.5 8.1.9" stroke-linecap="round"/><path d="M7.8 15.4c2.2-.5 4.6-.4 6.4.7" stroke-linecap="round"/></svg>';
 const WEB_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><path d="M12 2.5c2.6 2.6 4 6 4 9.5s-1.4 6.9-4 9.5c-2.6-2.6-4-6-4-9.5s1.4-6.9 4-9.5z"/></svg>';
+const YOUTUBE_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.3v5.4l4.8-2.7z" fill="currentColor" stroke="none"/></svg>';
+const FACEBOOK_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M13.8 21.5v-7.4h2.5l.4-2.9h-2.9v-1.85c0-.84.23-1.42 1.44-1.42h1.55V5.28c-.27-.036-1.18-.116-2.24-.116-2.22 0-3.73 1.355-3.73 3.845v2.145H8.3v2.9h2.55v7.4" stroke-linejoin="round"/></svg>';
+const TIKTOK_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v10.8a3.3 3.3 0 1 1-2.6-3.23" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 3c.4 2.5 2.1 4.2 4.6 4.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+// Shared icon-link builder used by both performer headings and luthier cards.
+function socialIconLink(url, icon, name, platform){
+  return '<a class="social-icon" href="' + url + '" target="_blank" rel="noopener noreferrer" title="' +
+    escapeHtml(name) + (platform === 'Website' ? '\u2019s website' : ' on ' + platform) +
+    '" aria-label="' + platform + '">' + icon + '</a>';
+}
+
+function socialIconsHtml(name, links){
+  if (!links) return '';
+  // Normalize keys so hand-edited data works regardless of case
+  // (e.g. "Facebook", "facebook", "FACEBOOK" all work).
+  const norm = {};
+  Object.keys(links).forEach(k => { norm[k.toLowerCase()] = links[k]; });
+
+  let out = '';
+  if (norm.website) out += socialIconLink(norm.website, WEB_ICON, name, 'Website');
+  if (norm.instagram) out += socialIconLink(norm.instagram, IG_ICON, name, 'Instagram');
+  if (norm.spotify) out += socialIconLink(norm.spotify, SPOTIFY_ICON, name, 'Spotify');
+  if (norm.youtube) out += socialIconLink(norm.youtube, YOUTUBE_ICON, name, 'YouTube');
+  if (norm.facebook) out += socialIconLink(norm.facebook, FACEBOOK_ICON, name, 'Facebook');
+  if (norm.tiktok) out += socialIconLink(norm.tiktok, TIKTOK_ICON, name, 'TikTok');
+  return out;
+}
 
 function performerNameHtml(name){
-  const links = PERFORMER_LINKS[name];
-  let out = '<span class="performer-entry">' + escapeHtml(name);
-  if (links){
-    if (links.website) out += '<a class="social-icon" href="' + links.website + '" target="_blank" rel="noopener noreferrer" title="' + escapeHtml(name) + '\u2019s website" aria-label="Website">' + WEB_ICON + '</a>';
-    if (links.instagram) out += '<a class="social-icon" href="' + links.instagram + '" target="_blank" rel="noopener noreferrer" title="' + escapeHtml(name) + ' on Instagram" aria-label="Instagram">' + IG_ICON + '</a>';
-    if (links.spotify) out += '<a class="social-icon" href="' + links.spotify + '" target="_blank" rel="noopener noreferrer" title="' + escapeHtml(name) + ' on Spotify" aria-label="Spotify">' + SPOTIFY_ICON + '</a>';
-  }
-  out += '</span>';
-  return out;
+  return '<span class="performer-entry">' + escapeHtml(name) + socialIconsHtml(name, PERFORMER_LINKS[name]) + '</span>';
 }
 
 function buildCard(item, opts){
@@ -800,7 +3027,6 @@ function render(){
   document.getElementById('performerSearchRow').style.display = sortMode === 'performer' ? 'flex' : 'none';
 
   if (sortMode === 'performer'){
-    populatePerformerSelect();
     renderPerformerView();
   } else if (sortMode === 'luthiers'){
     renderLuthierView();
@@ -873,22 +3099,37 @@ function buildDayGroups(day){
   return order.map(t => ({ time: t, items: byTime[t] }));
 }
 
-function renderTimePanels(){
+// Shared scaffolding for the Time and Venue views: one panel per festival day,
+// each built by `buildSections(day)` (which returns the DOM sections for that
+// day), falling back to an empty-state note when nothing matches the filter.
+function renderDayPanels(buildSections){
   const el = document.getElementById('content');
   el.innerHTML = '';
   DAYS.forEach(day => {
     const panel = document.createElement('div');
     panel.className = 'day-panel' + (day === activeDay ? ' active' : '');
-    const groups = buildDayGroups(day);
-    let anyVisible = false;
 
-    groups.forEach(g => {
+    const sections = buildSections(day);
+    sections.forEach(section => panel.appendChild(section));
+
+    if (sections.length === 0){
+      const note = document.createElement('p');
+      note.className = 'empty-note';
+      note.textContent = 'Nothing matches this filter on ' + DAY_LABEL[day].name + '.';
+      panel.appendChild(note);
+    }
+    el.appendChild(panel);
+  });
+}
+
+function renderTimePanels(){
+  renderDayPanels(day => buildDayGroups(day)
+    .map(g => {
       const visibleItems = g.items.filter(item => {
         const key = venueKey(item.venue);
         return activeVenues.size === 0 || activeVenues.has(key);
       });
-      if (visibleItems.length === 0) return;
-      anyVisible = true;
+      if (visibleItems.length === 0) return null;
 
       const tg = document.createElement('div');
       tg.className = 'time-group';
@@ -897,81 +3138,43 @@ function renderTimePanels(){
       timeCol.textContent = g.time;
       const cardsCol = document.createElement('div');
       cardsCol.className = 'cards-col';
-
       visibleItems.forEach(item => cardsCol.appendChild(buildCard(item)));
 
       tg.appendChild(timeCol);
       tg.appendChild(cardsCol);
-      panel.appendChild(tg);
-    });
-
-    if (!anyVisible){
-      const note = document.createElement('p');
-      note.className = 'empty-note';
-      note.textContent = 'Nothing matches this filter on ' + DAY_LABEL[day].name + '.';
-      panel.appendChild(note);
-    }
-    el.appendChild(panel);
-  });
+      return tg;
+    })
+    .filter(Boolean));
 }
 
 function renderVenuePanels(){
-  const el = document.getElementById('content');
-  el.innerHTML = '';
-  DAYS.forEach(day => {
-    const panel = document.createElement('div');
-    panel.className = 'day-panel' + (day === activeDay ? ' active' : '');
-
+  renderDayPanels(day => {
     const rows = DATA.filter(d => d.date === day).slice().sort((a,b)=>timeToMinutes(a.time)-timeToMinutes(b.time));
-    const venueOrder = Object.keys(VENUE_COLOR);
-    let anyVisible = false;
 
-    venueOrder.forEach(v => {
-      if (activeVenues.size > 0 && !activeVenues.has(v)) return;
-      const items = rows.filter(r => venueKey(r.venue) === v);
-      if (items.length === 0) return;
-      anyVisible = true;
+    return Object.keys(VENUE_COLOR)
+      .filter(v => activeVenues.size === 0 || activeVenues.has(v))
+      .map(v => {
+        const items = rows.filter(r => venueKey(r.venue) === v);
+        if (items.length === 0) return null;
 
-      const section = document.createElement('div');
-      section.className = 'venue-section';
-      section.style.setProperty('--accent', VENUE_COLOR[v]);
+        const section = document.createElement('div');
+        section.className = 'venue-section';
+        section.style.setProperty('--accent', VENUE_COLOR[v]);
 
-      const head = document.createElement('div');
-      head.className = 'venue-section-head';
-      head.innerHTML = '<span class="dot"></span>' + VENUE_SHORT[v];
-      section.appendChild(head);
+        const head = document.createElement('div');
+        head.className = 'venue-section-head';
+        head.innerHTML = '<span class="dot"></span>' + VENUE_SHORT[v];
+        section.appendChild(head);
 
-      const cardsCol = document.createElement('div');
-      cardsCol.className = 'cards-col';
-      items.forEach(item => cardsCol.appendChild(buildCard(item, {showTimeInline:true, showVenueInMeta:false})));
-      section.appendChild(cardsCol);
+        const cardsCol = document.createElement('div');
+        cardsCol.className = 'cards-col';
+        items.forEach(item => cardsCol.appendChild(buildCard(item, {showTimeInline:true, showVenueInMeta:false})));
+        section.appendChild(cardsCol);
 
-      panel.appendChild(section);
-    });
-
-    if (!anyVisible){
-      const note = document.createElement('p');
-      note.className = 'empty-note';
-      note.textContent = 'Nothing matches this filter on ' + DAY_LABEL[day].name + '.';
-      panel.appendChild(note);
-    }
-    el.appendChild(panel);
+        return section;
+      })
+      .filter(Boolean);
   });
-}
-
-function populatePerformerSelect(){
-  const select = document.getElementById('performerSelect');
-  const currentVal = select.value;
-  select.innerHTML = '<option value="">All performers</option>' +
-    PERFORMER_NAMES.map(n => '<option value="' + escapeHtml(n) + '">' + escapeHtml(n) + '</option>').join('');
-  // keep selection in sync with the current search query, if it matches a full name
-  if (PERFORMER_NAMES.includes(performerQuery)){
-    select.value = performerQuery;
-  } else if (PERFORMER_NAMES.includes(currentVal)){
-    select.value = currentVal;
-  } else {
-    select.value = '';
-  }
 }
 
 function renderPerformerView(){
@@ -1002,11 +3205,7 @@ function renderPerformerView(){
   }
 
   names.forEach(name => {
-    const appearances = map[name].slice().sort((a,b) => {
-      const da = DAYS.indexOf(a.date), db = DAYS.indexOf(b.date);
-      if (da !== db) return da - db;
-      return timeToMinutes(a.time) - timeToMinutes(b.time);
-    });
+    const appearances = sortByDayThenTime(map[name]);
 
     const block = document.createElement('div');
     block.className = 'performer-block';
@@ -1049,19 +3248,13 @@ function renderLuthierView(){
   grid.className = 'luthier-grid sans';
 
   list.forEach(l => {
-    const appearances = (map[l.name] || []).slice().sort((a,b) => {
-      const da = DAYS.indexOf(a.date), db = DAYS.indexOf(b.date);
-      if (da !== db) return da - db;
-      return timeToMinutes(a.time) - timeToMinutes(b.time);
-    });
+    const appearances = sortByDayThenTime(map[l.name] || []);
 
     const card = document.createElement('div');
     card.className = 'luthier-card' + (appearances.length ? ' has-events' : '');
 
-    let headHtml = '<p class="l-name">' + escapeHtml(l.name);
-    if (l.url) headHtml += '<a class="social-icon" href="' + l.url + '" target="_blank" rel="noopener noreferrer" title="' + escapeHtml(l.name) + '\u2019s website" aria-label="Website">' + WEB_ICON + '</a>';
-    if (l.instagram) headHtml += '<a class="social-icon" href="' + l.instagram + '" target="_blank" rel="noopener noreferrer" title="' + escapeHtml(l.name) + ' on Instagram" aria-label="Instagram">' + IG_ICON + '</a>';
-    headHtml += '</p>';
+    let headHtml = '<p class="l-name">' + escapeHtml(l.name) +
+      socialIconsHtml(l.name, Object.assign({website: l.url}, l)) + '</p>';
     if (l.location) headHtml += '<p class="l-location">' + escapeHtml(l.location) + '</p>';
     headHtml += '<p class="l-bio">' + escapeHtml(l.bio) + '</p>';
 
@@ -1093,13 +3286,6 @@ function renderLuthierView(){
 
 document.getElementById('performerSearch').addEventListener('input', (e) => {
   performerQuery = e.target.value;
-  document.getElementById('performerSelect').value = '';
-  renderPerformerView();
-});
-
-document.getElementById('performerSelect').addEventListener('change', (e) => {
-  performerQuery = e.target.value;
-  document.getElementById('performerSearch').value = e.target.value;
   renderPerformerView();
 });
 
