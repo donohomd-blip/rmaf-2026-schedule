@@ -604,6 +604,16 @@
   @media (max-width: 560px){
     .time-group{ grid-template-columns: 56px 1fr; }
     .time-col{ font-size: 0.68rem; }
+
+    /* Five segmented buttons is tight on narrow phones (the star tab was
+       getting clipped on iPhone-width screens) -- reclaim space by shrinking
+       the label and tightening button padding/font-size at this breakpoint. */
+    .sort-label{ display: none; }
+    .segmented button{
+      padding: 0.42rem 0.55rem;
+      font-size: 0.76rem;
+    }
+    .segmented{ -webkit-overflow-scrolling: touch; }
   }
 
   @media (prefers-reduced-motion: reduce){
