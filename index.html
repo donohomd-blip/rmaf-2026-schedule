@@ -3458,6 +3458,29 @@ document.getElementById('performerSearch').addEventListener('input', (e) => {
 });
 
 render();
+
+// ---- Auto-resize support for iframe embeds -------------------------------
+// When this page is embedded via <iframe> (e.g. on a WordPress or Squarespace
+// site), the iframe's own document scrolls independently of the outer page,
+// which creates a frustrating "stuck inside the box" feel. This tells the
+// parent page how tall the content actually is, so the embedding page can
+// resize the iframe to match and avoid a nested scrollbar entirely. Harmless
+// if the page isn't embedded at all -- postMessage just goes nowhere useful.
+function notifyParentOfHeight(){
+  try {
+    window.parent.postMessage(
+      { type: 'rmaf-schedule-resize', height: document.documentElement.scrollHeight },
+      '*'
+    );
+  } catch(e) { /* not embedded, or cross-origin restriction -- nothing to do */ }
+}
+if (window.ResizeObserver){
+  new ResizeObserver(notifyParentOfHeight).observe(document.documentElement);
+} else {
+  setInterval(notifyParentOfHeight, 500);
+}
+window.addEventListener('load', notifyParentOfHeight);
+notifyParentOfHeight();
 </script>
 
 </body>
