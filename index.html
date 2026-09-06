@@ -3209,7 +3209,7 @@ function renderSortSeg(){
   const el = document.getElementById('sortSeg');
   el.innerHTML = '';
   const starIcon = '<svg viewBox="0 0 24 24" width="14" height="14" style="vertical-align:-2px;"><path d="' + STAR_ICON_PATH + '" fill="currentColor"/></svg>';
-  [['time','Time'],['venue','Venue'],['performer','Performer'],['luthiers','Luthiers'],['mine','My Schedule']].forEach(([mode,label]) => {
+  [['time','Time'],['venue','Venue'],['performer','Performer'],['luthiers','Luthier'],['mine','My Schedule']].forEach(([mode,label]) => {
     const btn = document.createElement('button');
     if (mode === 'mine'){
       btn.innerHTML = starIcon + (starredIds.size ? ' ' + starredIds.size : '');
