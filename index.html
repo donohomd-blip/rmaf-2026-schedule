@@ -3134,6 +3134,8 @@ const WEB_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" st
 const YOUTUBE_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.3v5.4l4.8-2.7z" fill="currentColor" stroke="none"/></svg>';
 const FACEBOOK_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M13.8 21.5v-7.4h2.5l.4-2.9h-2.9v-1.85c0-.84.23-1.42 1.44-1.42h1.55V5.28c-.27-.036-1.18-.116-2.24-.116-2.22 0-3.73 1.355-3.73 3.845v2.145H8.3v2.9h2.55v7.4" stroke-linejoin="round"/></svg>';
 const TIKTOK_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v10.8a3.3 3.3 0 1 1-2.6-3.23" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 3c.4 2.5 2.1 4.2 4.6 4.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const BANDCAMP_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M8.7 8h4.6l2.0 8H10.7z" fill="currentColor" stroke="none"/></svg>';
+const APPLEMUSIC_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><circle cx="9.3" cy="15" r="1.6" fill="currentColor" stroke="none"/><path d="M10.9 15V8l4.3-1v6.3" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
 // Shared icon-link builder used by both performer headings and luthier cards.
 function socialIconLink(url, icon, name, platform){
@@ -3153,9 +3155,13 @@ function socialIconsHtml(name, links){
   if (norm.website) out += socialIconLink(norm.website, WEB_ICON, name, 'Website');
   if (norm.instagram) out += socialIconLink(norm.instagram, IG_ICON, name, 'Instagram');
   if (norm.spotify) out += socialIconLink(norm.spotify, SPOTIFY_ICON, name, 'Spotify');
+  if (norm.applemusic) out += socialIconLink(norm.applemusic, APPLEMUSIC_ICON, name, 'Apple Music');
+  if (norm.bandcamp) out += socialIconLink(norm.bandcamp, BANDCAMP_ICON, name, 'Bandcamp');
   if (norm.youtube) out += socialIconLink(norm.youtube, YOUTUBE_ICON, name, 'YouTube');
   if (norm.facebook) out += socialIconLink(norm.facebook, FACEBOOK_ICON, name, 'Facebook');
   if (norm.tiktok) out += socialIconLink(norm.tiktok, TIKTOK_ICON, name, 'TikTok');
+  // Note: email is intentionally never rendered here, even if present in the
+  // underlying data -- this app never displays personal email addresses.
   return out;
 }
 
