@@ -624,6 +624,87 @@
     color: var(--cream-faint);
   }
 
+  .legend-title{
+    margin: 0 0 0.6rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+  }
+
+  .legend-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.4rem;
+  }
+  .legend-list li{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+  }
+  .legend-icon-slot{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+  .legend-swatch{
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .legend-icon{
+    display: inline-block;
+    text-align: center;
+    color: var(--v-lobby);
+    flex-shrink: 0;
+  }
+  .legend-chip{
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 20px;
+    height: 11px;
+    border: 1px solid var(--hairline);
+    background: var(--bg-raised);
+    border-radius: 3px;
+  }
+  .legend-chip::before{
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--v-lobby);
+    margin-left: 3px;
+  }
+
+  @media (max-width: 560px){
+    .legend-list{ flex-direction: column; gap: 0.5rem; }
+    .legend-list li{ white-space: normal; }
+  }
+
+  .credit-line{
+    margin: 0.9rem 0 0;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--hairline);
+  }
+  .credit-line a{
+    color: var(--cream-dim);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--cream-faint);
+  }
+  .credit-line a:hover{ color: var(--cream); border-bottom-color: var(--v-lobby); }
+
   @media (max-width: 560px){
     .time-group{ grid-template-columns: 56px 1fr; }
     .time-col{ font-size: 0.68rem; }
@@ -676,12 +757,24 @@
     <p class="performer-count" id="performerCount"></p>
   </div>
 
+  <div class="performer-search-row sans" id="luthierSearchRow" style="display:none;">
+    <input type="text" class="performer-search" id="luthierSearch" placeholder="Search luthiers…">
+    <p class="performer-count" id="luthierCount"></p>
+  </div>
+
   <div id="content"></div>
 
 </div>
 
 <footer class="foot">
-  Color indicates venue. In Time or Venue view, tap a chip to isolate a venue's sessions; tap it again to clear. Tap any session to see its time span, duration, and lineup. Cross-checked against the official festival schedule (archtopfestival.com) — durations are calculated from listed start times and block windows; a "~" marks an estimated duration where no official end time was given. The Luthiers tab lists exhibitors from archtopfestival.com/luthiers/ — the site's most recently published exhibitor roster, published while invitations for the 2026 festival are still going out.
+  <p class="legend-title">Legend</p>
+  <ul class="legend-list">
+    <li><span class="legend-icon-slot"><span class="legend-swatch" style="background:var(--v-lobby)"></span></span>Color indicates venue</li>
+    <li><span class="legend-icon-slot"><span class="legend-chip"></span></span>Tap a venue chip to isolate its sessions — tap again to clear</li>
+    <li><span class="legend-icon-slot"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" style="color:var(--v-lobby)"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tap any session for its time span, duration, and lineup</li>
+    <li><span class="legend-icon-slot"><span class="legend-icon">★</span></span>Star an event to add it to My Schedule</li>
+  </ul>
+  <p class="credit-line">This tool was created in collaboration with Claude by <a href="https://www.bluemotion.pictures" target="_blank" rel="noopener noreferrer">Michael Donohoe</a>.</p>
 </footer>
 
 <script>
@@ -3118,6 +3211,7 @@ let sortMode = 'time';        // 'time' | 'venue' | 'performer' | 'luthiers' | '
 let activeDay = todaysFestivalDay();
 let activeVenues = new Set(); // empty = show all (Time/Venue modes)
 let performerQuery = '';
+let luthierQuery = '';
 
 // alphabetical list of unique performer names, built once from DATA
 const PERFORMER_NAMES = Array.from(new Set(DATA.flatMap(d => d.performers || []))).sort((a,b)=>a.localeCompare(b));
@@ -3286,6 +3380,7 @@ function render(){
   document.getElementById('dayTabs').style.display = (sortMode === 'performer' || sortMode === 'luthiers') ? 'none' : 'flex';
   document.getElementById('filterRow').style.display = (sortMode === 'time' || sortMode === 'venue') ? 'flex' : 'none';
   document.getElementById('performerSearchRow').style.display = sortMode === 'performer' ? 'flex' : 'none';
+  document.getElementById('luthierSearchRow').style.display = sortMode === 'luthiers' ? 'flex' : 'none';
 
   if (sortMode === 'performer'){
     renderPerformerView();
@@ -3529,16 +3624,29 @@ function renderLuthierView(){
   });
 
   const list = LUTHIERS.slice().sort((a,b)=>a.name.localeCompare(b.name));
+  const query = luthierQuery.trim().toLowerCase();
+  const filtered = query ? list.filter(l => l.name.toLowerCase().includes(query)) : list;
+
+  document.getElementById('luthierCount').textContent =
+    filtered.length + (filtered.length === 1 ? ' luthier' : ' luthiers') + ' exhibiting this year';
 
   const note = document.createElement('p');
   note.className = 'luthier-note';
   note.textContent = 'Guitar builders exhibiting at the festival. Tap a luthier with a schedule badge to see when and where they\'re showcasing.';
   el.appendChild(note);
 
+  if (filtered.length === 0){
+    const empty = document.createElement('p');
+    empty.className = 'empty-note';
+    empty.textContent = 'No luthier matches "' + luthierQuery + '".';
+    el.appendChild(empty);
+    return;
+  }
+
   const grid = document.createElement('div');
   grid.className = 'luthier-grid sans';
 
-  list.forEach(l => {
+  filtered.forEach(l => {
     const appearances = sortByDayThenTime(map[l.name] || []);
 
     const card = document.createElement('div');
@@ -3578,6 +3686,11 @@ function renderLuthierView(){
 document.getElementById('performerSearch').addEventListener('input', (e) => {
   performerQuery = e.target.value;
   renderPerformerView();
+});
+
+document.getElementById('luthierSearch').addEventListener('input', (e) => {
+  luthierQuery = e.target.value;
+  renderLuthierView();
 });
 
 render();
