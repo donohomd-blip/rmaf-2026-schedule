@@ -705,6 +705,16 @@
   }
   .credit-line a:hover{ color: var(--cream); border-bottom-color: var(--v-lobby); }
 
+  .source-line{
+    margin: 0.7rem 0 0;
+  }
+  .source-line a{
+    color: var(--cream-dim);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--cream-faint);
+  }
+  .source-line a:hover{ color: var(--cream); border-bottom-color: var(--v-lobby); }
+
   @media (max-width: 560px){
     .time-group{ grid-template-columns: 56px 1fr; }
     .time-col{ font-size: 0.68rem; }
@@ -773,7 +783,9 @@
     <li><span class="legend-icon-slot"><span class="legend-chip"></span></span>Tap a venue chip to isolate its sessions — tap again to clear</li>
     <li><span class="legend-icon-slot"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" style="color:var(--v-lobby)"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tap any session for its time span, duration, and lineup</li>
     <li><span class="legend-icon-slot"><span class="legend-icon">★</span></span>Star an event to add it to My Schedule</li>
+    <li><span class="legend-icon-slot"><span class="legend-icon">~</span></span>Marks an estimated duration, where no official end time was listed</li>
   </ul>
+  <p class="source-line">Schedule and exhibitor information sourced from <a href="https://www.archtopfestival.com" target="_blank" rel="noopener noreferrer">archtopfestival.com</a>.</p>
   <p class="credit-line">Created by <a href="https://www.bluemotion.pictures" target="_blank" rel="noopener noreferrer">Michael Donohoe</a>.</p>
 </footer>
 
